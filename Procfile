@@ -1,0 +1,1 @@
+web: gunicorn auxichron.wsgi --log-file -
