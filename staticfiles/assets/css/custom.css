@@ -222,3 +222,73 @@ a{
 
 
 
+
+  /* Fix select width overflow issue */
+.input-area,
+.nice-select,
+.nice-select .current {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.nice-select {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.nice-select.open .list {
+  width: 100%;
+}
+
+.nice-select .list .option {
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  max-width: 100%; /* Ensure option doesn't exceed list width */
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+
+
+.form-container {
+  max-width: 600px; /* Match your CTA paragraph max-width for consistency */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px; /* Space between fields */
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.form-row .input-area,
+.form-row .nice-select,
+.form-row input,
+.form-row select,
+.form-row textarea {
+  flex: 1; /* Each field takes equal space */
+  min-width: 0; /* Prevent overflow from long content */
+  box-sizing: border-box; /* Include padding in width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-row textarea {
+  height: 100px; /* Adjust height for message field */
+}
+
+@media (max-width: 767px) {
+  .form-row {
+    flex-direction: column; /* Stack fields vertically on small screens */
+    gap: 10px;
+  }
+}
