@@ -40,8 +40,8 @@ SECRET_KEY = 'django-insecure-8=464(=4$78c91*c4l4&cf4kgts&vdz$3mjp62+v7kq*dll2zl
 DEBUG = False
 
 # ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ["auxichro-production.up.railway.app"]
-CSRF_TRUSTED_ORIGINS = ["https://auxichro-production.up.railway.app"]
+ALLOWED_HOSTS = ["auxichronhealth.com"]
+CSRF_TRUSTED_ORIGINS = ["https://auxichronhealth.com"]
 
 
 
