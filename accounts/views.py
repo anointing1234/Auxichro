@@ -302,7 +302,7 @@ Contact: info@auxichronhospital.com | +234 803 471 5913
     <body style="font-family: Arial, sans-serif; background-color: #f4f6f7; margin: 0; padding: 0;">
         <div style="max-width: 700px; margin: 40px auto; background: #fff; border: 1px solid #ddd; padding: 30px;">
             <div style="text-align: center; border-bottom: 1px solid #e1e1e1; padding-bottom: 15px; margin-bottom: 25px;">
-                <img src="https://www.auxichronhospital.com/static/assets/img/logo/auxichron-logo.png" alt="Auxichron Hospital Logo" style="max-width: 150px;">
+                <img src="https://auxichronhospital.com/static/assets/img/logo/auxichron-logo.png" alt="Auxichron Hospital Logo" style="max-width: 150px;">
                 <h1 style="color: #02015A; margin: 10px 0;">Auxichron Hospital</h1>
                 <p style="font-size: 16px; color: #31353D;">New Appointment Request</p>
             </div>

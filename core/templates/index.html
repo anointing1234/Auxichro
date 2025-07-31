@@ -39,7 +39,10 @@
   <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-Nm3T9Drj9KMqIu2tEzblRfU57FrR7Kxd9Yy4vNK7LMH35CdfEwOzwFMLIo2ZK9e9OyeIhQpCKFw7G4pTwFWRUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
   <!-- JS Script -->
   <script src="{% static 'assets/js/plugins/jquery-3-7-1.min.js' %}"></script>
@@ -61,40 +64,322 @@
        }
      }
      </script>
+
+
+<style>/* General Section Styles */
+.section-area {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.vl-section-subtitle {
+  font-size: 16px;
+  color: #02015A;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vl-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #02015A;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.space24 { height: 24px; }
+.space16 { height: 16px; }
+
+/* Signup Now Section */
+.signup-text-area {
+  padding: 30px;
+  max-width: 500px;
+}
+
+.phone-image-area {
+  padding: 30px;
+}
+
+.phone-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Choose & Who We Serve Shared Styles */
+.content-area.card {
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e9ecef;
+}
+
+.content-area.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.icon-area {
+  font-size: 40px;
+  color: #4416FF;
+  margin-bottom: 20px;
+}
+
+.content-area .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #02015A;
+  margin-bottom: 10px;
+}
+
+.content-area p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.readmore.btn {
+  font-size: 14px;
+  padding: 10px 20px;
+  border-color: #4416FF;
+  color: #4416FF;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.readmore.btn:hover {
+  background-color: #4416FF;
+  color: #fff;
+}
+
+.why-choose-list,
+.who-we-serve-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.why-choose-item,
+.who-we-serve-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Our Why Section */
+.elements14.keyframe5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 200px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-list li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.why-list li i {
+  color: #4416FF;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.vl-btn4 {
+  background-color: #4416FF;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.vl-btn4:hover {
+  background-color: #02015A;
+  transform: translateY(-3px);
+}
+
+.team-img10 {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .vl-section-title {
+    font-size: 32px;
+  }
+
+  .section-description,
+  .why-list li {
+    font-size: 16px;
+  }
+
+  .signup-text-area,
+  .phone-image-area,
+  .content-area.card {
+    padding: 24px;
+  }
+
+  .why-choose-item,
+  .who-we-serve-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .content-area.card {
+    max-width: 100%;
+  }
+
+  .content-area .title {
+    font-size: 20px;
+  }
+
+  .content-area p {
+    font-size: 15px;
+  }
+
+  .vl-btn4 {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-text-area {
+    text-align: center;
+  }
+
+  .vl-section-subtitle {
+    justify-content: center;
+  }
+
+  .text-ani {
+    margin-top: -100px; /* Consider clarifying or removing if not used */
+  }
+
+  .signup-text-area,
+  .phone-image-area {
+    padding: 20px;
+  }
+
+  .vl-section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vl-section-title {
+    font-size: 28px;
+  }
+
+  .section-description,
+  .why-list li {
+    font-size: 14px;
+  }
+
+  .why-choose-item,
+  .who-we-serve-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .content-area.card {
+    padding: 20px;
+  }
+
+  .vl-btn4 {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .elements14.keyframe5 {
+    max-width: 150px;
+  }
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 1050; /* Ensure it’s above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spinner-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+}</style>
 </head>
 
-<body>
 
-  <!--===== PRELOADER STARTS =======-->
-  <div class="cs_preloader">
-    <div class="cs_preloader_in">
-      <div class="cs_wave_first">
-        <svg enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z">
-          </path>
-        </svg>
-      </div>
-      <div class="cs_wave_second">
-        <svg enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z">
-          </path>
-        </svg>
-      </div>
-    </div>
-  </div>
-  <!--===== PRELOADER ENDS =======-->
-
-  <!--===== PROGRESS STARTS=======-->
-  <div class="paginacontainer">
-    <div class="progress-wrap">
-      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-      </svg>
-    </div>
-  </div>
-  <!--===== PROGRESS ENDS=======-->
 
   <!--===== HEADER START =======-->
   <header class="homepage4-body">
@@ -188,9 +473,11 @@
     </div>
     <div class="vl-offcanvas-overlay"></div>
   </div>
-  <!--===== MOBILE HEADER STARTS =======-->
+
+    
+  
   <!--===== HERO AREA STARTS =======-->
-  <div class="hero4-section-area"
+  <div class="hero4-section-area mt-0"
     style="background-image: url({% static 'assets/img/all-images/bg/hero-bg3.png' %}); background-position: center; background-repeat: no-repeat; background-size: cover;">
     <div class="container">
       <div class="row align-items-center">
@@ -199,7 +486,7 @@
            
           </h5>
             <div class="space16"></div>
-            <h2 class="text-anime-style-3">Connected, holistic care throughout your health journey</h2>
+            <h2  class="text-anime-style-3 text-ani ">Connected, holistic care throughout your health journey</h2>
             <div class="space20"></div>
             <p data-aos="fade-left" data-aos-duration="900">Whether you're preventing illness, navigating a diagnosis, managing medications, or seeking support, Auxichron provides a connected network of care that helps you through your health journey. 
             </p>
@@ -245,6 +532,10 @@
 
 
 
+
+
+  
+
 <!--===== SIGN UP NOW AREA STARTS =======-->
 <section id="signup-now" class="signup-now-section-area sp6">
   <div class="container">
@@ -273,99 +564,16 @@
     </div>
   </div>
 
-  <!-- Inline CSS for styling -->
-  <style>
-    .signup-now-section-area {
-      padding: 80px 0;
-      background-color: #f8f9fa;
-    }
-
-    .vl-section-subtitle {
-      font-size: 16px;
-      color: #02015A;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .vl-section-title {
-      font-size: 36px;
-      font-weight: 700;
-      color: #02015A;
-      margin-bottom: 20px;
-    }
-
-    .section-description {
-      font-size: 18px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .space24 { height: 24px; }
-    .space16 { height: 16px; }
-
-    .signup-text-area {
-      padding: 30px;
-      max-width: 500px;
-    }
-
-    .phone-image-area {
-      padding: 30px;
-    }
-
-    .phone-image {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .vl-section-title {
-        font-size: 32px;
-      }
-
-      .section-description {
-        font-size: 16px;
-      }
-
-      .signup-text-area,
-      .phone-image-area {
-        padding: 24px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .signup-text-area {
-        text-align: center;
-      }
-
-      .vl-section-subtitle {
-        justify-content: center;
-      }
-
-      .signup-text-area,
-      .phone-image-area {
-        padding: 20px;
-      }
-
-      .vl-section-title {
-        font-size: 28px;
-      }
-    }
-  </style>
+  
 </section>
 <!--===== SIGN UP NOW AREA ENDS =======-->
 
 
 
+
   
   <!--===== ABOUT AREA STARTS =======-->
-  <div id="about" class="about4-section-area">
+  <div id="about" class="about4-section-area mb-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
@@ -402,7 +610,7 @@
   <!--===== ABOUT AREA ENDS =======-->
 
 
-    <div class="slider4-section-area">
+    <div class="slider4-section-area mt-2 mb-5">
       <div class="marquee-wrap">
         <div class="marquee-text">
           <div class="brand-single-box">
@@ -428,16 +636,10 @@
         </div>
       </div>
     </div>
+  
 
 
-
-
-
-
-
-
-    
-        <!--===== SERVICE AREA STARTS =======-->
+      <!--===== SERVICE AREA STARTS =======-->
         <div id="services" class="service4-section-area sp1">
           <img src="{% static 'assets/img/elements/elements12.png' %}" alt="Auxichron Health Decorative Element"
             class="elements12 keyframe5">
@@ -535,10 +737,7 @@
 
 
 
-
-
-
-
+        
 <!--===== WORKS AREA STARTS =======-->
         <div class="works4-section-area mt-5 pt-5 ">
           <div class="container">
@@ -722,11 +921,8 @@
         </div>
         <!--===== WORKS AREA ENDS =======-->
 
-
-
-    
-    <!--===== WHY CHOOSE AUXICHRON AREA STARTS =======-->
-<section id="why-choose" class="why-choose-section-area ">
+        <!--===== WHY CHOOSE AUXICHRON AREA STARTS =======-->
+<section id="why-choose" class="why-choose-section-area mb-3 mt-2" style="padding: 40px 0;">
   <div class="container">
     <!-- Section Header -->
     <div class="row justify-content-center">
@@ -738,7 +934,7 @@
             </svg>
           </h5>
           <div class="space24"></div>
-          <h2 class="vl-section-title text-anime-style-3">Why Choose Auxichron Health?</h2>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Why Choose Auxichron Health?</h2>
           <p class="section-description">Discover the reasons why Auxichron Health is your trusted partner for comprehensive, compassionate, and cutting-edge healthcare.</p>
         </div>
       </div>
@@ -749,267 +945,116 @@
       <div class="col-lg-12">
         <div class="why-choose-list row g-4">
           <!-- Item 1 -->
-          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="800">
-            <div class="content-area card h-100 shadow-sm">
-              <div class="icon-area">
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-heartbeat"></i>
               </div>
               <h4 class="title">Specialized in Long-Term Care</h4>
               <div class="space16"></div>
               <p>Expert care for chronic conditions like diabetes, hypertension, asthma, stroke, cancer, and arthritis, tailored to your unique needs.</p>
               <div class="space16"></div>
-              
             </div>
           </div>
           <!-- Item 2 -->
-          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="900">
-            <div class="content-area card h-100 shadow-sm">
-              <div class="icon-area">
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="650" data-aos-delay="150">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-wallet"></i>
               </div>
               <h4 class="title">Affordable & Accessible</h4>
               <div class="space16"></div>
               <p>Healthcare solutions designed to be inclusive and affordable, ensuring everyone can access quality care.</p>
               <div class="space16"></div>
-              
             </div>
           </div>
           <!-- Item 3 -->
-          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="1000">
-            <div class="content-area card h-100 shadow-sm">
-              <div class="icon-area">
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-user-check"></i>
               </div>
               <h4 class="title">Trusted Network</h4>
               <div class="space16"></div>
               <p>Verified professionals, licensed pharmacists, and trusted partner facilities ensure top-tier care you can rely on.</p>
               <div class="space16"></div>
-              
             </div>
           </div>
           <!-- Item 4 -->
-          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="1100">
-            <div class="content-area card h-100 shadow-sm">
-              <div class="icon-area">
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="750" data-aos-delay="250">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-users"></i>
               </div>
               <h4 class="title">Strong Support Community</h4>
               <div class="space16"></div>
               <p>Our support groups and education programs foster lasting behavior change and community connection.</p>
               <div class="space16"></div>
-              
             </div>
           </div>
           <!-- Item 5 -->
-          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="1200">
-            <div class="content-area card h-100 shadow-sm">
-              <div class="icon-area">
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-mobile-alt"></i>
               </div>
               <h4 class="title">Flexible Access</h4>
               <div class="space16"></div>
               <p>Connect with us via WhatsApp, in-app, or phone – we meet you where you are for seamless communication.</p>
               <div class="space16"></div>
-              
             </div>
           </div>
           <!-- Item 6 -->
-          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="1300">
-            <div class="content-area card h-100 shadow-sm">
-              <div class="icon-area">
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="850" data-aos-delay="350">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-lock"></i>
               </div>
               <h4 class="title">Secure and Private Records</h4>
               <div class="space16"></div>
               <p>Your health information is protected with state-of-the-art secure and private record-keeping.</p>
               <div class="space16"></div>
-              
             </div>
           </div>
           <!-- Item 7 -->
-          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="1400">
-            <div class="content-area card h-100 shadow-sm">
-              <div class="icon-area">
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-headset"></i>
               </div>
               <h4 class="title">24/7 User Support</h4>
               <div class="space16"></div>
               <p>Our dedicated team is available around the clock to assist you with any questions or needs.</p>
               <div class="space16"></div>
-              
             </div>
           </div>
           <!-- Item 8 -->
-          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="1500">
-            <div class="content-area card h-100 shadow-sm">
-              <div class="icon-area">
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="950" data-aos-delay="450">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
                 <i class="fas fa-credit-card"></i>
               </div>
               <h4 class="title">Flexible Payment Plans</h4>
               <div class="space16"></div>
               <p>Choose from a variety of payment options tailored to fit your budget, making healthcare hassle-free.</p>
               <div class="space16"></div>
-              
             </div>
           </div>
         </div>
       </div>
     </div>
-   
   </div>
-
- 
-  <!-- Inline CSS for Why Choose Section -->
-  <style>
-    .why-choose-section-area {
-      padding: 80px 0;
-      background-color: #f8f9fa;
-    }
-
-    .vl-section-subtitle {
-      font-size: 16px;
-      color: #02015A;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .vl-section-title {
-      font-size: 36px;
-      font-weight: 700;
-      color: #02015A;
-      margin-bottom: 20px;
-    }
-
-    .section-description {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
-
-    .space24 { height: 24px; }
-    .space16 { height: 16px; }
-
-    .why-choose-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      align-items: stretch;
-    }
-
-    .why-choose-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content-area.card {
-      padding: 30px;
-      border-radius: 12px;
-      background-color: #fff;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      width: 100%;
-      max-width: 360px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border: 1px solid #e9ecef;
-    }
-
-    .content-area.card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    .icon-area {
-      font-size: 40px;
-      color: #4416FF;
-      margin-bottom: 20px;
-    }
-
-    .content-area .title {
-      font-size: 22px;
-      font-weight: 600;
-      color: #02015A;
-      margin-bottom: 10px;
-    }
-
-    .content-area p {
-      font-size: 16px;
-      color: #666;
-      line-height: 1.6;
-      flex-grow: 1;
-    }
-
-    .readmore.btn {
-      font-size: 14px;
-      padding: 10px 20px;
-      border-color: #4416FF;
-      color: #4416FF;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .readmore.btn:hover {
-      background-color: #4416FF;
-      color: #fff;
-    }
-
-    /* Responsive Design for Why Choose */
-    @media (max-width: 992px) {
-      .why-choose-item {
-        flex: 0 0 50%;
-        max-width: 50%;
-      }
-
-      .vl-section-title {
-        font-size: 32px;
-      }
-
-      .section-description {
-        font-size: 16px;
-      }
-
-      .content-area.card {
-        padding: 24px;
-        max-width: 100%;
-      }
-
-      .content-area .title {
-        font-size: 20px;
-      }
-
-      .content-area p {
-        font-size: 15px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .why-choose-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-
-      .vl-section-title {
-        font-size: 28px;
-      }
-
-      .content-area.card {
-        padding: 20px;
-      }
-    }
-  </style>
 </section>
 <!--===== WHY CHOOSE AUXICHRON AREA ENDS =======-->
 
+
+
+
+
+
+
 <!--===== WHO WE SERVE AREA STARTS =======-->
-<section id="who-we-serve" class="who-we-serve-section-area ">
+<section id="who-we-serve" class="who-we-serve-section-area mb-5 m-4 ">
   <div class="container">
     <!-- Section Header -->
     <div class="row justify-content-center">
@@ -1116,164 +1161,13 @@
 
   </div>
 
-  <!-- Inline CSS for Who We Serve Section -->
-  <style>
-    .who-we-serve-section-area {
-      padding: 80px 0;
-      background-color: #f8f9fa;
-    }
-
-    .vl-section-subtitle {
-      font-size: 16px;
-      color: #02015A;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .vl-section-title {
-      font-size: 36px;
-      font-weight: 700;
-      color: #02015A;
-      margin-bottom: 20px;
-    }
-
-    .section-description {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
-
-    .space24 { height: 24px; }
-    .space16 { height: 16px; }
-
-    .who-we-serve-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      align-items: stretch;
-    }
-
-    .who-we-serve-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content-area.card {
-      padding: 30px;
-      border-radius: 12px;
-      background-color: #fff;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      width: 100%;
-      max-width: 360px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border: 1px solid #e9ecef;
-    }
-
-    .content-area.card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    .icon-area {
-      font-size: 40px;
-      color: #4416FF;
-      margin-bottom: 20px;
-    }
-
-    .content-area .title {
-      font-size: 22px;
-      font-weight: 600;
-      color: #02015A;
-      margin-bottom: 10px;
-    }
-
-    .content-area p {
-      font-size: 16px;
-      color: #666;
-      line-height: 1.6;
-      flex-grow: 1;
-    }
-
-    .readmore.btn {
-      font-size: 14px;
-      padding: 10px 20px;
-      border-color: #4416FF;
-      color: #4416FF;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .readmore.btn:hover {
-      background-color: #4416FF;
-      color: #fff;
-    }
-
-    /* Responsive Design for Who We Serve */
-    @media (max-width: 992px) {
-      .who-we-serve-item {
-        flex: 0 0 50%;
-        max-width: 50%;
-      }
-
-      .vl-section-title {
-        font-size: 32px;
-      }
-
-      .section-description {
-        font-size: 16px;
-      }
-
-      .content-area.card {
-        padding: 24px;
-        max-width: 100%;
-      }
-
-      .content-area .title {
-        font-size: 20px;
-      }
-
-      .content-area p {
-        font-size: 15px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .who-we-serve-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-
-      .vl-section-title {
-        font-size: 28px;
-      }
-
-      .content-area.card {
-        padding: 20px;
-      }
-    }
-  </style>
 </section>
 <!--===== WHO WE SERVE AREA ENDS =======-->
 
 
+<!--===== CDMA INFO SECTION STARTS =======-->
+<div class="cdma-info-section-area" style="padding: 40px 0;">
 
-
-
-
-
-   <!--===== CDMA INFO SECTION STARTS =======-->
-<div class="cdma-info-section-area mb-5">
-  <img src="{% static 'assets/img/elements/elements13.png' %}" alt="CDMA Decorative Element" class="elements13 keyframe5" onerror="this.src='https://via.placeholder.com/200x200.png?text=Decorative+Element';">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 m-auto">
@@ -1284,435 +1178,81 @@
             </svg>
           </h5>
           <div class="space24"></div>
-          <h2 class="vl-section-title text-anime-style-3">Chronic Disease Mate for Africa (CDMA)</h2>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Chronic Disease Mate for Africa (CDMA)</h2>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-12">
-        <div class="cdma-info-content text-center">
+        <div class="cdma-info-content text-center" style="min-height: 200px;">
           <p>Chronic Disease Mate for Africa (CDMA) is a pioneering umbrella organization dedicated to addressing the growing burden of non-communicable diseases (NCDs) across the African continent. With a mission to reduce premature mortality and improve quality of life, CDMA collaborates with healthcare providers, communities, and policymakers to promote integrated, patient-centered care for chronic conditions such as cardiovascular diseases, diabetes, cancer, and chronic respiratory diseases.</p>
           <div class="space16"></div>
           <p>Founded to tackle the rising prevalence of NCDs, which account for an increasing share of mortality in sub-Saharan Africa, CDMA supports innovative strategies like the WHO’s PEN-Plus initiative, focusing on early diagnosis, treatment, and community-based care. By fostering partnerships, advocating for policy development, and leveraging technology such as mHealth solutions, CDMA empowers African health systems to address both infectious and non-communicable diseases effectively.</p>
           <div class="space24"></div>
-          <a href="{% url 'partnerships' %}" class="btn btn-primary cdma-donate-btn mb-5" data-aos="fade-up" data-aos-duration="1000">Donate Now</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-        <!--===== PARTNER ORGANIZATIONS SECTION STARTS =======-->
-        <div class="partner-org-section-area  mb-5 pt-3">
-          <img src="{% static 'assets/img/elements/elements14.png' %}" alt="Partner Organizations Decorative Element"
-            class="elements14 keyframe5">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 m-auto">
-                <div class="heading4 text-center space-margin60">
-                  <h5 class="vl-section-subtitle">Auxichron Health<span> | </span> Our Partners <svg
-                      xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
-                      <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992"
-                        stroke="#02015A" stroke-width="1.5" />
-                    </svg>
-                  </h5>
-                  <div class="space24"></div>
-                  <h2 class="vl-section-title text-anime-style-3">Our Partner Organizations</h2>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="partner-org-content">
-                  <p>At Auxichron Health, we collaborate with leading organizations to enhance our impact in delivering
-                    innovative healthcare solutions across Africa. Our partnerships with global and regional entities
-                    strengthen our ability to address chronic diseases, promote health education, and provide accessible
-                    care. Below are some of our key partner organizations working alongside us to transform healthcare
-                    delivery.</p>
-                  <div class="space24"></div>
-                  <div class="partner-org-slider owl-carousel">
-                    <div class="partner-boxarea">
-                      <div class="content-area">
-                        <a href="#" class="title">World Health Organization (WHO)</a>
-                        <div class="space16"></div>
-                        <p>Collaborating on initiatives like PEN-Plus to address non-communicable diseases in
-                          low-resource settings.</p>
-                      </div>
-                      <div class="img1 image-anime">
-                        <img src="{% static 'assets/img/partners/who-logo.png' %}" alt="WHO Logo">
-                      </div>
-                    </div>
-
-                    <div class="partner-boxarea">
-                      <div class="content-area">
-                        <a href="#" class="title">Africa CDC</a>
-                        <div class="space16"></div>
-                        <p>Partnering to strengthen health systems and improve disease surveillance across the
-                          continent.</p>
-                      </div>
-                      <div class="img1 image-anime">
-                        <img src="{% static 'assets/img/partners/africa-cdc-logo.png' %}" alt="Africa CDC Logo">
-                      </div>
-                    </div>
-
-                    <div class="partner-boxarea">
-                      <div class="content-area">
-                        <a href="#" class="title">Global Fund</a>
-                        <div class="space16"></div>
-                        <p>Supporting our efforts in providing equitable access to healthcare resources and medications.
-                        </p>
-                      </div>
-                      <div class="img1 image-anime">
-                        <img src="{% static 'assets/img/partners/global-fund-logo.png' %}" alt="Global Fund Logo">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="space24"></div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--===== PARTNER ORGANIZATIONS SECTION ENDS =======-->
-
-{% comment %} 
-
-        <!--===== TESTIMONIAL AREA STARTS =======-->
-<div class="testimonial4-section-area sp1"
-  style="background-image: url({% static 'assets/img/all-images/bg/bg6.png' %}); background-position: center; background-repeat: no-repeat; background-size: cover;">
-  <img src="{% static 'assets/img/elements/elements12.png' %}" alt="" class="elements12 keyframe5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 m-auto">
-        <div class="heading4 text-center space-margin60">
-          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span>Testimonials <svg
-              xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
-              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992"
-                stroke="#02015A" stroke-width="1.5" />
-            </svg>
-          </h5>
-          <div class="space24"></div>
-          <h2 class="vl-section-title text-anime-style-3">Our Patients' Stories</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="testimonial4-slider-area owl-carousel">
-          <div class="testimonial4-boxarea">
-            <div class="icons">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M5.94797 12.75C5.0495 12.75 4.30029 12.7501 3.70552 12.6701C3.07772 12.5857 2.51092 12.4 2.05545 11.9445C1.59998 11.4891 1.41431 10.9223 1.32991 10.2945C1.24994 9.6997 1.24997 8.95049 1.25 8.05202V7.948C1.24997 7.04953 1.24994 6.30029 1.32991 5.70552C1.41431 5.07772 1.59998 4.51092 2.05546 4.05545C2.51093 3.59998 3.07772 3.41431 3.70552 3.32991C4.30029 3.24994 5.04951 3.24997 5.94797 3.25H6.05199C6.95046 3.24997 7.6997 3.24994 8.29448 3.32991C8.92227 3.41431 9.48907 3.59998 9.94454 4.05545C10.4 4.51092 10.5857 5.07772 10.6701 5.70552C10.7501 6.30029 10.75 7.0495 10.75 7.94797V8.052C10.75 8.95046 10.7501 9.6997 10.6701 10.2945C10.5857 10.9223 10.4 11.4891 9.94454 11.9445C9.48907 12.4 8.92227 12.5857 8.29448 12.6701C7.6997 12.7501 6.95049 12.75 6.05203 12.75H5.94797Z"
-                  fill="#02015A" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M2.79531 20.0475C2.63099 19.5202 2.92522 18.9596 3.45249 18.7953C6.56016 17.8268 8.75002 15.0749 8.75002 11.8873V7.75C8.75002 7.19771 9.19774 6.75 9.75002 6.75C10.3023 6.75 10.75 7.19771 10.75 7.75V11.8873C10.75 16.0337 7.90846 19.5015 4.04755 20.7047C3.52027 20.869 2.95963 20.5748 2.79531 20.0475Z"
-                  fill="#02015A" />
-                <path
-                  d="M17.948 12.75C17.0495 12.75 16.3003 12.7501 15.7055 12.6701C15.0777 12.5857 14.5109 12.4 14.0555 11.9445C13.6 11.4891 13.4143 10.9223 13.3299 10.2945C13.2499 9.6997 13.25 8.95049 13.25 8.05202V7.948C13.25 7.04953 13.2499 6.30029 13.3299 5.70552C13.4143 5.07772 13.6 4.51092 14.0555 4.05545C14.5109 3.59998 15.0777 3.41431 15.7055 3.32991C16.3003 3.24994 17.0495 3.24997 17.948 3.25H18.052C18.9505 3.24997 19.6997 3.24994 20.2945 3.32991C20.9223 3.41431 21.4891 3.59998 21.9445 4.05545C22.4 4.51092 22.5857 5.07772 22.6701 5.70552C22.7501 6.30029 22.75 7.0495 22.75 7.94797V8.052C22.75 8.95046 22.7501 9.6997 22.6701 10.2945C22.5857 10.9223 22.4 11.4891 21.9445 11.9445C21.4891 12.4 20.9223 12.5857 20.2945 12.6701C19.6997 12.7501 18.9505 12.75 18.052 12.75H17.948Z"
-                  fill="#02015A" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M2.79531 20.0475C2.63099 19.5202 2.92522 18.9596 3.45249 18.7953C6.56016 17.8268 8.75002 15.0749 8.75002 11.8873V7.75C8.75002 7.19771 9.19774 6.75 9.75002 6.75C10.3023 6.75 10.75 7.19771 10.75 7.75V11.8873C10.75 16.0337 7.90846 19.5015 4.04755 20.7047C3.52027 20.869 2.95963 20.5748 2.79531 20.0475Z"
-                  fill="#02015A" />
-              </svg>
-            </div>
-            <div class="space16"></div>
-            <p>"I've been a patient at Auxichron Health for years, and the care I receive is exceptional. The
-              staff is compassionate, highly skilled, and always prioritizes my well-being. I wholeheartedly
-              recommend Auxichron Health to anyone seeking top-quality healthcare."</p>
-            <div class="space24"></div>
-            <div class="text-area">
-              <a href="#">Chinelo Okonkwo</a>
-              <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777A)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777A">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777B)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777B">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777C)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777C">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777D)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777D">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <path
-                      d="M9.00002 0C8.64377 0 8.28751 0.184375 8.10314 0.55625L6.06251 4.69375L1.49689 5.35625C0.67814 5.475 0.350015 6.48437 0.943765 7.0625L4.24689 10.2812L3.46564 14.8281C3.32501 15.6437 4.18439 16.2656 4.91564 15.8812L9.00002 13.7375V0Z"
-                      fill="#F2C94C" />
-                  </svg></li>
-                <li>(4.5)</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="testimonial4-boxarea">
-            <div class="icons">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M5.94797 12.75C5.0495 12.75 4.30029 12.7501 3.70552 12.6701C3.07772 12.5857 2.51092 12.4 2.05545 11.9445C1.59998 11.4891 1.41431 10.9223 1.32991 10.2945C1.24994 9.6997 1.24997 8.95049 1.25 8.05202V7.948C1.24997 7.04953 1.24994 6.30029 1.32991 5.70552C1.41431 5.07772 1.59998 4.51092 2.05546 4.05545C2.51093 3.59998 3.07772 3.41431 3.70552 3.32991C4.30029 3.24994 5.04951 3.24997 5.94797 3.25H6.05199C6.95046 3.24997 7.6997 3.24994 8.29448 3.32991C8.92227 3.41431 9.48907 3.59998 9.94454 4.05545C10.4 4.51092 10.5857 5.07772 10.6701 5.70552C10.7501 6.30029 10.75 7.0495 10.75 7.94797V8.052C10.75 8.95046 10.7501 9.6997 10.6701 10.2945C10.5857 10.9223 10.4 11.4891 9.94454 11.9445C9.48907 12.4 8.92227 12.5857 8.29448 12.6701C7.6997 12.7501 6.95049 12.75 6.05203 12.75H5.94797Z"
-                  fill="#02015A" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M2.79531 20.0475C2.63099 19.5202 2.92522 18.9596 3.45249 18.7953C6.56016 17.8268 8.75002 15.0749 8.75002 11.8873V7.75C8.75002 7.19771 9.19774 6.75 9.75002 6.75C10.3023 6.75 10.75 7.19771 10.75 7.75V11.8873C10.75 16.0337 7.90846 19.5015 4.04755 20.7047C3.52027 20.869 2.95963 20.5748 2.79531 20.0475Z"
-                  fill="#02015A" />
-                <path
-                  d="M17.948 12.75C17.0495 12.75 16.3003 12.7501 15.7055 12.6701C15.0777 12.5857 14.5109 12.4 14.0555 11.9445C13.6 11.4891 13.4143 10.9223 13.3299 10.2945C13.2499 9.6997 13.25 8.95049 13.25 8.05202V7.948C13.25 7.04953 13.2499 6.30029 13.3299 5.70552C13.4143 5.07772 13.6 4.51092 14.0555 4.05545C14.5109 3.59998 15.0777 3.41431 15.7055 3.32991C16.3003 3.24994 17.0495 3.24997 17.948 3.25H18.052C18.9505 3.24997 19.6997 3.24994 20.2945 3.32991C20.9223 3.41431 21.4891 3.59998 21.9445 4.05545C22.4 4.51092 22.5857 5.07772 22.6701 5.70552C22.7501 6.30029 22.75 7.0495 22.75 7.94797V8.052C22.75 8.95046 22.7501 9.6997 22.6701 10.2945C22.5857 10.9223 22.4 11.4891 21.9445 11.9445C21.4891 12.4 20.9223 12.5857 20.2945 12.6701C19.6997 12.7501 18.9505 12.75 18.052 12.75H17.948Z"
-                  fill="#02015A" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M2.79531 20.0475C2.63099 19.5202 2.92522 18.9596 3.45249 18.7953C6.56016 17.8268 20.75 15.0749 20.75 11.8873V7.75C20.75 7.19771 21.1977 6.75 21.75 6.75C22.3023 6.75 22.75 7.19771 22.75 7.75V11.8873C22.75 16.0337 19.9084 19.5015 16.0475 20.7047C15.5203 20.869 14.9596 20.5748 14.7953 20.0475Z"
-                  fill="#02015A" />
-              </svg>
-            </div>
-            <div class="space16"></div>
-            <p>"I recently visited Auxichron Health for a minor injury, and I was impressed by the seamless and
-              professional service. From check-in to discharge, the process was efficient, and the staff ensured
-              I felt cared for every step of the way. I highly recommend Auxichron Health for exceptional
-              medical care."</p>
-            <div class="space24"></div>
-            <div class="text-area">
-              <a href="#">Adebayo Oluwaseun</a>
-              <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777E)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777E">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777F)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777F">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777G)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777G">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777H)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777H">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <path
-                      d="M9.00002 0C8.64377 0 8.28751 0.184375 8.10314 0.55625L6.06251 4.69375L1.49689 5.35625C0.67814 5.475 0.350015 6.48437 0.943765 7.0625L4.24689 10.2812L3.46564 14.8281C3.32501 15.6437 4.18439 16.2656 4.91564 15.8812L9.00002 13.7375V0Z"
-                      fill="#F2C94C" />
-                  </svg></li>
-                <li>(4.5)</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="testimonial4-boxarea">
-            <div class="icons">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M5.94797 12.75C5.0495 12.75 4.30029 12.7501 3.70552 12.6701C3.07772 12.5857 2.51092 12.4 2.05545 11.9445C1.59998 11.4891 1.41431 10.9223 1.32991 10.2945C1.24994 9.6997 1.24997 8.95049 1.25 8.05202V7.948C1.24997 7.04953 1.24994 6.30029 1.32991 5.70552C1.41431 5.07772 1.59998 4.51092 2.05546 4.05545C2.51093 3.59998 3.07772 3.41431 3.70552 3.32991C4.30029 3.24994 5.04951 3.24997 5.94797 3.25H6.05199C6.95046 3.24997 7.6997 3.24994 8.29448 3.32991C8.92227 3.41431 9.48907 3.59998 9.94454 4.05545C10.4 4.51092 10.5857 5.07772 10.6701 5.70552C10.7501 6.30029 10.75 7.0495 10.75 7.94797V8.052C10.75 8.95046 10.7501 9.6997 10.6701 10.2945C10.5857 10.9223 10.4 11.4891 9.94454 11.9445C9.48907 12.4 8.92227 12.5857 8.29448 12.6701C7.6997 12.7501 6.95049 12.75 6.05203 12.75H5.94797Z"
-                  fill="#02015A" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M2.79531 20.0475C2.63099 19.5202 2.92522 18.9596 3.45249 18.7953C6.56016 17.8268 8.75002 15.0749 8.75002 11.8873V7.75C8.75002 7.19771 9.19774 6.75 9.75002 6.75C10.3023 6.75 10.75 7.19771 10.75 7.75V11.8873C10.75 16.0337 7.90846 19.5015 4.04755 20.7047C3.52027 20.869 2.95963 20.5748 2.79531 20.0475Z"
-                  fill="#02015A" />
-                <path
-                  d="M17.948 12.75C17.0495 12.75 16.3003 12.7501 15.7055 12.6701C15.0777 12.5857 14.5109 12.4 14.0555 11.9445C13.6 11.4891 13.4143 10.9223 13.3299 10.2945C13.2499 9.6997 13.25 8.95049 13.25 8.05202V7.948C13.25 7.04953 13.2499 6.30029 13.3299 5.70552C13.4143 5.07772 13.6 4.51092 14.0555 4.05545C14.5109 3.59998 15.0777 3.41431 15.7055 3.32991C16.3003 3.24994 17.0495 3.24997 17.948 3.25H18.052C18.9505 3.24997 19.6997 3.24994 20.2945 3.32991C20.9223 3.41431 21.4891 3.59998 21.9445 4.05545C22.4 4.51092 22.5857 5.07772 22.6701 5.70552C22.7501 6.30029 22.75 7.0495 22.75 7.94797V8.052C22.75 8.95046 22.7501 9.6997 22.6701 10.2945C22.5857 10.9223 22.4 11.4891 21.9445 11.9445C21.4891 12.4 20.9223 12.5857 20.2945 12.6701C19.6997 12.7501 18.9505 12.75 18.052 12.75H17.948Z"
-                  fill="#02015A" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M14.7953 20.0475C14.631 19.5202 14.9252 18.9596 15.4525 18.7953C18.5601 17.8268 20.75 15.0749 20.75 11.8873V7.75C20.75 7.19771 21.1977 6.75 21.75 6.75C22.3023 6.75 22.75 7.19771 22.75 7.75V11.8873C22.75 16.0337 19.9084 19.5015 16.0475 20.7047C15.5203 20.869 14.9596 20.5748 14.7953 20.0475Z"
-                  fill="#02015A" />
-              </svg>
-            </div>
-            <div class="space16"></div>
-            <p>"I've been a patient at Auxichron Health for several years, and the level of care is outstanding.
-              The doctors and staff are consistently friendly, attentive, and dedicated to providing
-              personalized healthcare that truly makes a difference."</p>
-            <div class="space24"></div>
-            <div class="text-area">
-              <a href="#">Fatima Abubakar</a>
-              <ul>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777I)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777I">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777J)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777J">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777K)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777K">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <g clip-path="url(#clip0_5927_9777L)">
-                      <path
-                        d="M8.10314 0.556646L6.06251 4.69415L1.49689 5.35977C0.67814 5.47852 0.350015 6.4879 0.943765 7.06602L4.24689 10.2848L3.46564 14.8316C3.32501 15.6535 4.19064 16.2691 4.91564 15.8848L9.00001 13.7379L13.0844 15.8848C13.8094 16.266 14.675 15.6535 14.5344 14.8316L13.7531 10.2848L17.0563 7.06602C17.65 6.4879 17.3219 5.47852 16.5031 5.35977L11.9375 4.69415L9.89689 0.556646C9.53126 -0.180854 8.47189 -0.190229 8.10314 0.556646Z"
-                        fill="#F2C94C" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_5927_9777L">
-                        <rect width="18" height="16" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
-                    fill="none">
-                    <path
-                      d="M9.00002 0C8.64377 0 8.28751 0.184375 8.10314 0.55625L6.06251 4.69375L1.49689 5.35625C0.67814 5.475 0.350015 6.48437 0.943765 7.0625L4.24689 10.2812L3.46564 14.8281C3.32501 15.6437 4.18439 16.2656 4.91564 15.8812L9.00002 13.7375V0Z"
-                      fill="#F2C94C" />
-                  </svg></li>
-                <li>(4.5)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="space40"></div>
-        <div class="btn-area1 text-center">
-          <a href="{% url 'contact' %}" class="vl-btn4">Book an Appointment <span><svg
-                xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z"
-                  fill="white" />
-              </svg></span>
-          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX3kxWR3iO5DMxpGXLYOdqTm4qSXAzK0EoRDc7bjrAN5vw3w/viewform" class="btn btn-primary cdma-donate-btn mb-5" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Donate Now</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!--===== TESTIMONIAL AREA ENDS =======-->
- {% endcomment %}
+<!--===== CDMA INFO SECTION ENDS =======-->
 
 
- <!--===== TEAM AREA STARTS =======-->
-<div class="team4-section-area sp1">
+<!--===== PARTNER ORGANIZATIONS SECTION STARTS =======-->
+<div class="partner-org-section-area" style="padding: 40px 0;">
+ 
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 m-auto">
+      <div class="col-lg-8 m-auto">
         <div class="heading4 text-center space-margin60">
-          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span>Our Team <svg
-              xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
-              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992"
-                stroke="#02015A" stroke-width="1.5" />
+          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span> Our Partners
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
             </svg>
           </h5>
           <div class="space24"></div>
-          <h2 class="vl-section-title text-anime-style-3">Meet Our Team</h2>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Our Partner Organizations</h2>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col-lg-12">
-        <div class="team4-boxarea text-center">
-          <div class="img1">
-            <img src="{% static 'assets/img/all-images/team/md.jpg' %}" alt="Eseosa Iyagbaye" class="team-img10">
+        <div class="partner-org-content" style="min-height: 200px;">
+          <p>At Auxichron Health, we collaborate with leading organizations to enhance our impact in delivering innovative healthcare solutions across Africa. Our partnerships with global and regional entities strengthen our ability to address chronic diseases, promote health education, and provide accessible care. Below are some of our key partner organizations working alongside us to transform healthcare delivery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== PARTNER ORGANIZATIONS SECTION ENDS =======-->
+
+<!--===== TEAM AREA STARTS =======-->
+<div class="team4-section-area" style="padding: 40px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 m-auto">
+        <div class="heading4 text-center space-margin60">
+          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span>Our Team
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+            </svg>
+          </h5>
+          <div class="space24"></div>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Meet Our Team</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="team4-boxarea text-center" style="min-height: 400px;">
+          <div class="img1" style="width: 200px; height: 200px; margin: 0 auto;">
+            <img src="{% static 'assets/img/all-images/team/md.jpg' %}" alt="Eseosa Iyagbaye" class="team-img10" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="name-area">
-            <a href="">Eseosa Iyagbaye (PharmD)</a>
+            <a href="#">Eseosa Iyagbaye (PharmD)</a>
             <div class="space12"></div>
             <p>Chief Executive Officer</p>
             <div class="space12"></div>
@@ -1729,217 +1269,48 @@
     </div>
   </div>
 </div>
-<style>
-  .team-img10 {
-    max-width: 200px; /* Adjust this value to make the image smaller */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    margin: 0 auto; /* Ensure image is centered */
-  }
-</style>
 <!--===== TEAM AREA ENDS =======-->
 
 
-        <!--===== BLOG AREA STARTS =======-->
-        {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' %}" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <div id="blog" class="vl-blog-4-area sp2">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 m-auto">
-                <div class="vl-blog-1-section-box heading4 text-center space-margin60">
-                  <h5 class="vl-section-subtitle">Auxichron Health<span> | </span>Our Blogs <svg
-                      xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
-                      <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992"
-                        stroke="#02015A" stroke-width="1.5" />
-                    </svg>
-                  </h5>
-                  <div class="space24"></div>
-                  <h2 class="vl-section-title text-anime-style-3">From Our Blog</h2>
-                </div>
-              </div>
-            </div>
-            <div class="row" id="blog-container">
-              <!-- Spinner displayed while loading -->
-              <div class="col-12 text-center" id="loading-spinner">
-                <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-                  <span class="visually-hidden">Loading...</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> {% endcomment %}
 
-
-
-        {% load static %}
 <!--===== OUR WHY SECTION STARTS =======-->
-<section id="our-why" class="our-why-section-area sp6">
-  <img src="{% static 'assets/img/elements/elements14.png' %}" alt="Decorative Element" class="elements14 keyframe5" onerror="this.src='https://via.placeholder.com/200x200.png?text=Decorative+Element';">
+<section id="our-why" class="our-why-section-area sp6" style="padding: 40px 0;">
+  <img src="{% static 'assets/img/elements/elements14.png' %}" alt="Decorative Element" class="elements14" style="width: 100px; height: 100px; animation: fadeIn 1s ease-out;" onerror="this.src='https://via.placeholder.com/200x200.png?text=Decorative+Element';">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10">
         <div class="heading4 text-center space-margin60">
-          <h5 class="vl-section-subtitle">Our Mission<span> | </span> Why We Exist 
+          <h5 class="vl-section-subtitle">Our Mission<span> | </span> Why We Exist
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
               <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
             </svg>
           </h5>
           <div class="space24"></div>
-          <h2 class="vl-section-title text-anime-style-3">Our Why</h2>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Our Why</h2>
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-lg-10 col-md-12" data-aos="fade-up" data-aos-duration="900">
-        <div class="why-content-area text-center">
+      <div class="col-lg-10 col-md-12" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="why-content-area text-center" style="min-height: 300px;">
           <p class="section-description">At Auxichron Health, we are driven by a deep understanding of the challenges posed by chronic diseases in Africa and a commitment to transforming care for those affected.</p>
           <div class="space16"></div>
           <ul class="why-list">
-            <li><i class="fas fa-heartbeat"></i> Chronic diseases are long-term, life-altering, and often lonely.</li>
-            <li><i class="fas fa-heartbeat"></i> They now account for 3 in 5 deaths in Nigeria yet our systems still treat them like side notes.</li>
-            <li><i class="fas fa-heartbeat"></i> Most health systems in Africa are built for emergencies, not continuity. They respond to crises but don’t sustain care.</li>
-            <li><i class="fas fa-heartbeat"></i> People with chronic conditions deserve more than pills. They need education, community, support, access, and hope. They need to be seen, heard, and assisted consistently.</li>
-            <li><i class="fas fa-heartbeat"></i> There’s a care gap: between appointments, across providers, and especially in underserved communities. And that gap often leads to complications, hospitalizations, even death.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> Chronic diseases are long-term, life-altering, and often lonely.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> They now account for 3 in 5 deaths in Nigeria yet our systems still treat them like side notes.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> Most health systems in Africa are built for emergencies, not continuity. They respond to crises but don’t sustain care.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> People with chronic conditions deserve more than pills. They need education, community, support, access, and hope. They need to be seen, heard, and assisted consistently.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> There’s a care gap: between appointments, across providers, and especially in underserved communities. And that gap often leads to complications, hospitalizations, even death.</li>
           </ul>
           <div class="space16"></div>
           <p class="section-description"><strong>Auxichron was born to fill that gap</strong> to create connected, coordinated, and compassionate care that empowers individuals to live fully, not just manage symptoms.</p>
           <div class="space24"></div>
-         
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Inline CSS for styling -->
-  <style>
-    .our-why-section-area {
-      padding: 80px 0;
-      background-color: #f8f9fa;
-      position: relative;
-    }
-
-    .elements14.keyframe5 {
-      position: absolute;
-      top: 0;
-      right: 0;
-      max-width: 200px;
-      height: auto;
-      opacity: 0.8;
-    }
-
-    .vl-section-subtitle {
-      font-size: 16px;
-      color: #02015A;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .vl-section-title {
-      font-size: 36px;
-      font-weight: 700;
-      color: #02015A;
-      margin-bottom: 20px;
-    }
-
-    .section-description {
-      font-size: 18px;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .why-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: left;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .why-list li {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .why-list li i {
-      color: #4416FF;
-      font-size: 20px;
-      margin-top: 4px;
-    }
-
-    .space24 { height: 24px; }
-    .space16 { height: 16px; }
-
-    .vl-btn4 {
-      background-color: #4416FF;
-      color: white;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .vl-btn4:hover {
-      background-color: #02015A;
-      transform: translateY(-3px);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .vl-section-title {
-        font-size: 32px;
-      }
-
-      .section-description,
-      .why-list li {
-        font-size: 16px;
-      }
-
-      .vl-btn4 {
-        padding: 10px 20px;
-        font-size: 14px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .vl-section-title {
-        font-size: 28px;
-      }
-
-      .section-description,
-      .why-list li {
-        font-size: 14px;
-      }
-
-      .vl-btn4 {
-        padding: 8px 16px;
-        font-size: 13px;
-      }
-
-      .elements14.keyframe5 {
-        max-width: 150px;
-      }
-    }
-  </style>
 </section>
-
+<!--===== OUR WHY SECTION ENDS =======-->
 
       <!--===== CTA AREA STARTS =======-->
 <section class="cta4-section-area" style="background-image: url({% static 'assets/img/all-images/bg/bg5.png' %}); background-position: center; background-size: cover; background-repeat: no-repeat;">
@@ -1961,7 +1332,7 @@
           </ul>
           <div class="space24"></div>
           <div class="btn-area1">
-            <a href="{% url 'contact' %}" class="vl-btn4" data-aos="fade-up" data-aos-duration="1100">Apply to Join Now
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSetnNrwMn8tu9GDyY2DGZOwRJ9BKigpvrltjnn-CGlnW84iEg/viewform" class="vl-btn4" data-aos="fade-up" data-aos-duration="1100">Apply to Join Now
               <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white" />
@@ -1999,13 +1370,15 @@
     </div>
   </div>
 
-  <!-- Inline CSS for styling -->
   
 
 </section>
 <!--===== CTA AREA ENDS =======-->
 
-        <!--===== FOOTER AREA STARTS =======-->
+
+
+
+ <!--===== FOOTER AREA STARTS =======-->
         <div class="vl-footer4-section-area mb-0"
           style="background-image: url({% static 'assets/img/all-images/bg/bg4.png' %}); background-position: center; background-repeat: no-repeat; background-size: cover;">
           <div class="container">
@@ -2041,9 +1414,8 @@
                     <li><a href="{% url 'home' %}#about">About Us</a></li>
                     <li><a href="{% url 'home' %}#services">Services</a></li>
                     <li><a href="{% url 'home' %}#blog">Blog & Resources</a></li>
-                    <li><a href="{% url 'impact_initiatives' %}">Impact & Initiatives</a></li>
+           
                     <li><a href="{% url 'contact' %}">Appointments</a></li>
-                    <li><a href="{% url 'partnerships' %}">Partnerships</a></li>
                   </ul>
                 </div>
               </div>
@@ -2089,9 +1461,10 @@
                   </ul>
                   <div class="space20"></div>
                 <ul class="social-links">
-                  <li><a href="#" aria-label="Follow Auxichron Health on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a href="#" aria-label="Follow Auxichron Health on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                  <li><a href="#" aria-label="Follow Auxichron Health on Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=100082807493200" aria-label="Follow Auxichron Health on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/chronmate-app/" aria-label="Follow Auxichron Health on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://www.instagram.com/auxichron?igsh=MTV4ZGFmaDU1dzZncQ==" aria-label="Follow Auxichron Health on Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                
             
                   <li><a href="https://wa.me/2349059940348" aria-label="Follow Auxichron Health on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
                 </ul>
@@ -2113,7 +1486,8 @@
         <!--===== FOOTER AREA ENDS =======-->
 
 
-        <!-- Loading Overlay Spinner -->
+
+     <!-- Loading Overlay Spinner -->
 <div id="loadingOverlay" class="loading-overlay" style="display: none;">
   <div class="spinner-container">
     <div class="spinner-border text-primary" role="status">
@@ -2123,7 +1497,9 @@
   </div>
 </div>
 
-        <!--===== JS SCRIPT LINK =======-->
+
+
+ <!--===== JS SCRIPT LINK =======-->
         <script src="{% static 'assets/js/plugins/bootstrap.min.js' %}"></script>
         <script src="{% static 'assets/js/plugins/fontawesome.js' %}"></script>
         <script src="{% static 'assets/js/plugins/aos.js' %}"></script>
@@ -2148,9 +1524,12 @@
 
 
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha512-NZ7uvmRQ6rgtdW8FTCoAyo9H4XvZlmN4k4cDHTn6cQ9eRXbU30RWuvHgDNOo0wrGKhFBo4l7Wzk3RQjC+35yrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
 
 <script>
@@ -2213,47 +1592,6 @@
   });
 </script>
 
-<!-- CSS for Loading Overlay -->
-<style>
-  .loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    z-index: 1050; /* Ensure it’s above other content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .spinner-container {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-  .spinner-border {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-</style>
-
-
         <script>
           $(document).ready(function () {
             $('.partner-org-slider').owlCarousel({
@@ -2282,7 +1620,7 @@
               <i class="fa-solid fa-calendar-alt"></i>
               <span class="fab-label">Book Appointment</span>
             </a>
-            <a href="{% url 'partnerships' %}" class="fab-button" title="Donate to Auxichron Health"
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX3kxWR3iO5DMxpGXLYOdqTm4qSXAzK0EoRDc7bjrAN5vw3w/viewform" class="fab-button" title="Donate to Auxichron Health"
               aria-label="Donate to Auxichron Health" data-aos="fade-up" data-aos-duration="900">
               <i class="fa-solid fa-heart"></i>
               <span class="fab-label">Donate</span>
