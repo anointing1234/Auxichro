@@ -107,14 +107,14 @@ Message: {donation_details['message'] or 'N/A'}
 Reference: {donation_details['reference']}
 
 This is an automated message from the Auxichron Health donation system.
-Contact: info@auxichronhealth.com | +234 803 471 5913
+Contact: info@auxichronhealth.com | +2349059940348
 """
             admin_html_message = f"""
 <html>
     <body style="font-family: Arial, sans-serif; background-color: #f4f6f7; margin: 0; padding: 0;">
         <div style="max-width: 700px; margin: 40px auto; background: #fff; border: 1px solid #ddd; padding: 30px;">
             <div style="text-align: center; border-bottom: 1px solid #e1e1e1; padding-bottom: 15px; margin-bottom: 25px;">
-                <img src="https://www.auxichronhealth.com/static/assets/img/logo/auxichron-logo.png" alt="Auxichron Health Logo" style="max-width: 150px;">
+                <img src="https://auxichronhealth.com/static/assets/img/logo/logo1.png" alt="Auxichron Health Logo" style="max-width: 150px;">
                 <h1 style="color: #02015A; margin: 10px 0;">Auxichron Health</h1>
                 <p style="font-size: 16px; color: #31353D;">New Donation Notification</p>
             </div>
@@ -134,14 +134,9 @@ Contact: info@auxichronhealth.com | +234 803 471 5913
                 <p style="font-size: 14px; color: #31353D;">Auxichron Health, 123 Health St, Wellness City, Nigeria</p>
                 <p style="font-size: 14px; color: #31353D;">
                     <a href="mailto:info@auxichronhealth.com" style="color: #02015A; text-decoration: none;">info@auxichronhealth.com</a> | 
-                    <a href="tel:+2348034715913" style="color: #02015A; text-decoration: none;">+234 803 471 5913</a>
+                    <a href="tel:+2349059940348" style="color: #02015A; text-decoration: none;">+2349059940348</a>
                 </p>
-                <div style="margin-top: 10px;">
-                    <a href="https://facebook.com/auxichronhealth" style="margin: 0 5px;"><img src="https://www.auxichronhealth.com/static/assets/img/icons/facebook.png" alt="Facebook" style="width: 24px;"></a>
-                    <a href="https://linkedin.com/company/auxichronhealth" style="margin: 0 5px;"><img src="https://www.auxichronhealth.com/static/assets/img/icons/linkedin.png" alt="LinkedIn" style="width: 24px;"></a>
-                    <a href="https://instagram.com/auxichronhealth" style="margin: 0 5px;"><img src="https://www.auxichronhealth.com/static/assets/img/icons/instagram.png" alt="Instagram" style="width: 24px;"></a>
-                    <a href="https://youtube.com/channel/auxichronhealth" style="margin: 0 5px;"><img src="https://www.auxichronhealth.com/static/assets/img/icons/youtube.png" alt="YouTube" style="width: 24px;"></a>
-                </div>
+                
             </div>
         </div>
     </body>
@@ -164,14 +159,14 @@ Your contribution makes a lasting impact. Visit https://www.auxichronhealth.com/
 Best regards,
 The Auxichron Health Team
 
-Contact: info@auxichronhealth.com | +234 803 471 5913
+Contact: info@auxichronhealth.com | +2349059940348
 """
             donor_html_message = f"""
 <html>
     <body style="font-family: Arial, sans-serif; background-color: #f4f6f7; margin: 0; padding: 0;">
         <div style="max-width: 700px; margin: 40px auto; background: #fff; border: 1px solid #ddd; padding: 30px;">
             <div style="text-align: center; border-bottom: 1px solid #e1e1e1; padding-bottom: 15px; margin-bottom: 25px;">
-                <img src="https://www.auxichronhealth.com/static/assets/img/logo/auxichron-logo.png" alt="Auxichron Health Logo" style="max-width: 150px;">
+                <img src="https://auxichronhealth.com/static/assets/img/logo/logo1.png" alt="Auxichron Health Logo" style="max-width: 150px;">
                 <h1 style="color: #02015A; margin: 10px 0;">Thank You for Your Donation!</h1>
                 <p style="font-size: 16px; color: #31353D;">Auxichron Health</p>
             </div>
@@ -191,7 +186,7 @@ Contact: info@auxichronhealth.com | +234 803 471 5913
                 <p style="font-size: 14px; color: #31353D;">Auxichron Health, 123 Health St, Wellness City, Nigeria</p>
                 <p style="font-size: 14px; color: #31353D;">
                     <a href="mailto:info@auxichronhealth.com" style="color: #02015A; text-decoration: none;">info@auxichronhealth.com</a> | 
-                    <a href="tel:+2348034715913" style="color: #02015A; text-decoration: none;">+234 803 471 5913</a>
+                    <a href="tel:+2349059940348" style="color: #02015A; text-decoration: none;">+2349059940348</a>
                 </p>
                 <div style="margin-top: 10px;">
                     <a href="https://facebook.com/auxichronhealth" style="margin: 0 5px;"><img src="https://www.auxichronhealth.com/static/assets/img/icons/facebook.png" alt="Facebook" style="width: 24px;"></a>
@@ -251,6 +246,24 @@ def donation_success(request):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def book_appointment(request):
     if request.method == 'POST':
         try:
@@ -259,13 +272,12 @@ def book_appointment(request):
             email = request.POST.get('email', '').strip()
             phone_number = request.POST.get('phone_number', '').strip()
             service_type = request.POST.get('service_type', 'Not specified')
-            appointment_date = request.POST.get('appointment_date', '')
             message = request.POST.get('message', '').strip()
 
             # Server-side validation
-            required_fields = [full_name, email, phone_number, service_type, appointment_date]
+            required_fields = [full_name, email, phone_number, service_type]
             if not all(required_fields):
-                missing_fields = [field for field, value in zip(['full_name', 'email', 'phone_number', 'service_type', 'appointment_date'], required_fields) if not value]
+                missing_fields = [field for field, value in zip(['full_name', 'email', 'phone_number', 'service_type'], required_fields) if not value]
                 logger.warning(f"Invalid submission: Missing fields - {', '.join(missing_fields)}")
                 return JsonResponse({'success': False, 'message': 'Please fill in all required fields.'}, status=400)
 
@@ -279,58 +291,51 @@ def book_appointment(request):
             phone_pattern = r'^\+234[0-9]{10}$|^0[0-9]{10}$'
             if not re.match(phone_pattern, phone_number):
                 logger.warning(f"Invalid phone format: {phone_number}")
-                return JsonResponse({'success': False, 'message': 'Please provide a valid Nigerian phone number (e.g., +2348034715913 or 08034715913).'}, status=400)
+                return JsonResponse({'success': False, 'message': 'Please provide a valid Nigerian phone number (e.g., +2349059940348 or 08034715913).'}, status=400)
 
-            # Admin email content (updated with Auxichron Hospital)
-            admin_subject = 'New Appointment Request – Auxichron Hospital'
+            # Admin email content
+            admin_subject = 'New Contact Request – Auxichron Health'
             admin_plain_message = f"""
-New Appointment Request for Auxichron Hospital
+New Contact Request for Auxichron Health
 
 Full Name: {full_name}
 Email: {email}
 Phone Number: {phone_number}
 Service Type: {service_type}
-Appointment Date: {appointment_date}
 Message: {message or 'N/A'}
 
 Submitted on: {datetime.now().strftime('%Y-%m-%d %I:%M %p WAT')}
-This is an automated message from the Auxichron Hospital appointment system.
-Contact: info@auxichronhospital.com | +234 803 471 5913
+This is an automated message from the Auxichron Health contact system.
+Contact: info@auxichronhealth.com | +2349059940348
 """
             admin_html_message = f"""
 <html>
     <body style="font-family: Arial, sans-serif; background-color: #f4f6f7; margin: 0; padding: 0;">
         <div style="max-width: 700px; margin: 40px auto; background: #fff; border: 1px solid #ddd; padding: 30px;">
             <div style="text-align: center; border-bottom: 1px solid #e1e1e1; padding-bottom: 15px; margin-bottom: 25px;">
-                <img src="https://auxichronhospital.com/static/assets/img/logo/auxichron-logo.png" alt="Auxichron Hospital Logo" style="max-width: 150px;">
-                <h1 style="color: #02015A; margin: 10px 0;">Auxichron Hospital</h1>
-                <p style="font-size: 16px; color: #31353D;">New Appointment Request</p>
+                <img src="https://auxichronhospital.com/static/assets/img/logo/auxichron-logo.png" alt="Auxichron Health Logo" style="max-width: 150px;">
+                <h1 style="color: #02015A; margin: 10px 0;">Auxichron Health</h1>
+                <p style="font-size: 16px; color: #31353D;">New Contact Request</p>
             </div>
-            <p style="font-size: 15px; color: #31353D;">A new appointment request has been submitted with the following details:</p>
+            <p style="font-size: 15px; color: #31353D;">A new contact request has been submitted with the following details:</p>
             <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
                 <tr><td style="padding: 8px; font-weight: bold; width: 30%;">Full Name:</td><td style="padding: 8px;">{full_name}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Email:</td><td style="padding: 8px;">{email}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Phone Number:</td><td style="padding: 8px;">{phone_number}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Service Type:</td><td style="padding: 8px;">{service_type}</td></tr>
-                <tr><td style="padding: 8px; font-weight: bold;">Appointment Date:</td><td style="padding: 8px;">{appointment_date}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Message:</td><td style="padding: 8px;">{message or 'N/A'}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Submitted On:</td><td style="padding: 8px;">{datetime.now().strftime('%Y-%m-%d %I:%M %p WAT')}</td></tr>
             </table>
             <p style="margin-top: 30px; font-size: 14px; color: #666;">
-                This is an automated message from the Auxichron Hospital appointment system.
+                This is an automated message from the Auxichron Health contact system.
             </p>
             <div style="text-align: center; border-top: 1px solid #e1e1e1; padding-top: 15px; margin-top: 25px;">
-                <p style="font-size: 14px; color: #31353D;">Auxichron Hospital, 123 Health St, Wellness City, Nigeria</p>
+                <p style="font-size: 14px; color: #31353D;">Auxichron Health, 123 Health St, Wellness City, Nigeria</p>
                 <p style="font-size: 14px; color: #31353D;">
-                    <a href="mailto:info@auxichronhospital.com" style="color: #02015A; text-decoration: none;">info@auxichronhospital.com</a> | 
-                    <a href="tel:+2348034715913" style="color: #02015A; text-decoration: none;">+234 803 471 5913</a>
+                    <a href="mailto:info@auxichronhealth.com" style="color: #02015A; text-decoration: none;">info@auxichronhealth.com</a> | 
+                    <a href="tel:+2349059940348" style="color: #02015A; text-decoration: none;">+2349059940348</a>
                 </p>
-                <div style="margin-top: 10px;">
-                    <a href="https://facebook.com/auxichronhospital" style="margin: 0 5px;"><img src="https://www.auxichronhospital.com/static/assets/img/icons/facebook.png" alt="Facebook" style="width: 24px;"></a>
-                    <a href="https://linkedin.com/company/auxichronhospital" style="margin: 0 5px;"><img src="https://www.auxichronhospital.com/static/assets/img/icons/linkedin.png" alt="LinkedIn" style="width: 24px;"></a>
-                    <a href="https://instagram.com/auxichronhospital" style="margin: 0 5px;"><img src="https://www.auxichronhospital.com/static/assets/img/icons/instagram.png" alt="Instagram" style="width: 24px;"></a>
-                    <a href="https://youtube.com/channel/auxichronhospital" style="margin: 0 5px;"><img src="https://www.auxichronhospital.com/static/assets/img/icons/youtube.png" alt="YouTube" style="width: 24px;"></a>
-                </div>
+                
             </div>
         </div>
     </body>
@@ -338,60 +343,50 @@ Contact: info@auxichronhospital.com | +234 803 471 5913
 """
 
             # User confirmation email content
-            user_subject = 'Your Appointment Request with Auxichron Hospital'
+            user_subject = 'Thank You for Contacting Auxichron Health'
             user_plain_message = f"""
 Dear {full_name},
 
-Thank you for requesting an appointment with Auxichron Hospital. We have received your request and will contact you soon to confirm your appointment details.
+Thank you for contacting Auxichron Health. We have received your message and will get back to you as soon as possible.
 
 Full Name: {full_name}
 Email: {email}
 Phone Number: {phone_number}
 Service Type: {service_type}
-Appointment Date: {appointment_date}
 Message: {message or 'N/A'}
 
-For any urgent inquiries, please contact us at info@auxichronhospital.com or +234 803 471 5913.
+For any urgent inquiries, please contact us at info@auxichronhealth.com or +2349059940348.
 
 Best regards,
-The Auxichron Hospital Team
+The Auxichron Health Team
 """
             user_html_message = f"""
 <html>
     <body style="font-family: Arial, sans-serif; background-color: #f4f6f7; margin: 0; padding: 0;">
         <div style="max-width: 700px; margin: 40px auto; background: #fff; border: 1px solid #ddd; padding: 30px;">
             <div style="text-align: center; border-bottom: 1px solid #e1e1e1; padding-bottom: 15px; margin-bottom: 25px;">
-                <img src="https://www.auxichronhospital.com/static/assets/img/logo/auxichron-logo.png" alt="Auxichron Hospital Logo" style="max-width: 150px;">
-                <h1 style="color: #02015A; margin: 10px 0;">Thank You for Your Appointment Request!</h1>
-                <p style="font-size: 16px; color: #31353D;">Auxichron Hospital</p>
+                <img src="https://auxichronhospital.com/static/assets/img/logo/auxichron-logo.png" alt="Auxichron Health Logo" style="max-width: 150px;">
+                <h1 style="color: #02015A; margin: 10px 0;">Thank You for Contacting Us!</h1>
+                <p style="font-size: 16px; color: #31353D;">Auxichron Health</p>
             </div>
             <p style="font-size: 15px; color: #31353D;">Dear {full_name},</p>
-            <p style="font-size: 15px; color: #31353D;">Thank you for requesting an appointment with Auxichron Hospital. We have received your request and will contact you soon to confirm your appointment details.</p>
+            <p style="font-size: 15px; color: #31353D;">Thank you for contacting Auxichron Health. We have received your message and will get back to you as soon as possible.</p>
             <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
                 <tr><td style="padding: 8px; font-weight: bold; width: 30%;">Full Name:</td><td style="padding: 8px;">{full_name}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Email:</td><td style="padding: 8px;">{email}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Phone Number:</td><td style="padding: 8px;">{phone_number}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Service Type:</td><td style="padding: 8px;">{service_type}</td></tr>
-                <tr><td style="padding: 8px; font-weight: bold;">Appointment Date:</td><td style="padding: 8px;">{appointment_date}</td></tr>
                 <tr><td style="padding: 8px; font-weight: bold;">Message:</td><td style="padding: 8px;">{message or 'N/A'}</td></tr>
             </table>
-            <p style="font-size: 15px; color: #31353D; margin-top: 20px;">For any urgent inquiries, please contact us at <a href="mailto:info@auxichronhospital.com" style="color: #02015A; text-decoration: none;">info@auxichronhospital.com</a> or <a href="tel:+2348034715913" style="color: #02015A; text-decoration: none;">+234 803 471 5913</a>.</p>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="https://www.auxichronhospital.com/appointment.html" style="background: #02015A; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 14px;">Book Another Appointment</a>
-            </div>
-            <p style="font-size: 15px; color: #31353D; margin-top: 20px;">Best regards,<br>The Auxichron Hospital Team</p>
+            <p style="font-size: 15px; color: #31353D; margin-top: 20px;">For any urgent inquiries, please contact us at <a href="mailto:info@auxichronhealth.com" style="color: #02015A; text-decoration: none;">info@auxichronhealth.com</a> or <a href="tel:+2349059940348" style="color: #02015A; text-decoration: none;">+2349059940348</a>.</p>
+            <p style="font-size: 15px; color: #31353D; margin-top: 20px;">Best regards,<br>The Auxichron Health Team</p>
             <div style="text-align: center; border-top: 1px solid #e1e1e1; padding-top: 15px; margin-top: 25px;">
-                <p style="font-size: 14px; color: #31353D;">Auxichron Hospital, 123 Health St, Wellness City, Nigeria</p>
+                <p style="font-size: 14px; color: #31353D;">Auxichron Health, 123 Health St, Wellness City, Nigeria</p>
                 <p style="font-size: 14px; color: #31353D;">
-                    <a href="mailto:info@auxichronhospital.com" style="color: #02015A; text-decoration: none;">info@auxichronhospital.com</a> | 
-                    <a href="tel:+2348034715913" style="color: #02015A; text-decoration: none;">+234 803 471 5913</a>
+                    <a href="mailto:info@auxichronhealth.com" style="color: #02015A; text-decoration: none;">info@auxichronhealth.com</a> | 
+                    <a href="tel:+2349059940348" style="color: #02015A; text-decoration: none;">+2349059940348</a>
                 </p>
-                <div style="margin-top: 10px;">
-                    <a href="https://facebook.com/auxichronhospital" style="margin: 0 5px;"><img src="https://www.auxichronhospital.com/static/assets/img/icons/facebook.png" alt="Facebook" style="width: 24px;"></a>
-                    <a href="https://linkedin.com/company/auxichronhospital" style="margin: 0 5px;"><img src="https://www.auxichronhospital.com/static/assets/img/icons/linkedin.png" alt="LinkedIn" style="width: 24px;"></a>
-                    <a href="https://instagram.com/auxichronhospital" style="margin: 0 5px;"><img src="https://www.auxichronhospital.com/static/assets/img/icons/instagram.png" alt="Instagram" style="width: 24px;"></a>
-                    <a href="https://youtube.com/channel/auxichronhospital" style="margin: 0 5px;"><img src="https://www.auxichronhospital.com/static/assets/img/icons/youtube.png" alt="YouTube" style="width: 24px;"></a>
-                </div>
+                
             </div>
         </div>
     </body>
@@ -429,10 +424,10 @@ The Auxichron Hospital Team
                 # Continue with success response to avoid exposing error to user
                 pass
 
-            return JsonResponse({'success': True, 'message': f'Thank you, {full_name}, for your appointment request! We will contact you soon to confirm.'})
+            return JsonResponse({'success': True, 'message': f'Thank you, {full_name}, for contacting Auxichron Health! We will get back to you soon.'})
 
         except Exception as e:
-            logger.error(f"Unexpected error in book_appointment: {str(e)}")
+            logger.error(f"Unexpected error in contact_us: {str(e)}")
             return JsonResponse({'success': False, 'message': 'An unexpected error occurred. Please try again later.'}, status=500)
 
     return render(request, 'contact.html')
