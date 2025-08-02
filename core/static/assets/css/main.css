@@ -13752,7 +13752,7 @@ body {
   flex: 1;
 }
 .works4-section-area .cs_case_study_1_list .cs_case_study.cs_style_1 {
-  min-height: 400px;
+  max-height: 600px;
 }
 .works4-section-area .cs_case_study_1_list .cs_case_study.cs_style_1 .cs_case_study_in {
   transition: all 0.2s ease;
