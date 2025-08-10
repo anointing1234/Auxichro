@@ -1,0 +1,655 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auxichron Health | Healthcare Services & Solutions</title>
+    <meta name="description" content="Auxichron Health provides innovative healthcare services, connecting patients, providers, partners, and investors to improve health outcomes." />
+    <meta name="keywords" content="Auxichron Health, healthcare services, medical solutions, patient care, healthcare providers, health innovation" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Auxichron Health" />
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Auxichron Health | Healthcare Services & Solutions" />
+    <meta property="og:description" content="Discover Auxichron Health's mission to deliver innovative healthcare services and connect with patients, providers, and partners." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.auxichronhealth.com" />
+    <meta property="og:image" content="{% static 'assets/img/logo/auxichron-logo.png' %}" />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Auxichron Health | Healthcare Services & Solutions" />
+    <meta name="twitter:description" content="Discover Auxichron Health's mission to deliver innovative healthcare services and connect with patients, providers, and partners." />
+    <meta name="twitter:image" content="{% static 'assets/img/logo/auxichron-logo.png' %}" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/img/logo/auxichron-fav.png' %}" type="image/x-icon" />
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/aos.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/fontawesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/owlcarousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/sidebar.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/slick-slider.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
+
+    <!-- JS Script -->
+    <script src="{% static 'assets/js/plugins/jquery-3-7-1.min.js' %}"></script>
+    <!-- Schema Markup for Organization -->
+    <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "Organization",
+       "name": "Auxichron Health",
+       "url": "https://www.auxichronhealth.com",
+       "logo": "{% static 'assets/img/logo/auxichron-logo.png' %}",
+       "description": "Auxichron Health is a digital hub providing innovative healthcare services, connecting patients, healthcare providers, partners, and investors to improve health outcomes.",
+       "contactPoint": {
+         "@type": "ContactPoint",
+         "telephone": "+1-123-456-7890",
+         "contactType": "Customer Service",
+         "email": "info@auxichronhealth.com",
+         "areaServed": "Global"
+       }
+     }
+     </script>
+  </head>
+
+  <body>
+    {% comment %} <!-- ===== PRELOADER STARTS ======= -->
+    <div class="cs_preloader">
+      <div class="cs_preloader_in">
+        <div class="cs_wave_first">
+          <svg enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg">
+            <path d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path>
+          </svg>
+        </div>
+        <div class="cs_wave_second">
+          <svg enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg">
+            <path d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- ===== PRELOADER ENDS ======= -->
+
+    <!-- ===== PROGRESS STARTS======= -->
+    <div class="paginacontainer">
+      <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+      </div>
+    </div>
+    <!-- ===== PROGRESS ENDS======= --> {% endcomment %}
+
+    <!-- ===== HEADER START ======= -->
+    <header class="homepage4-body">
+      <div id="vl-header-sticky" class="vl-header-area vl-transparent-header">
+        <div class="container">
+          <div class="row align-items-center row-bg1">
+            <div class="col-lg-2 col-md-6 col-6">
+              <div class="vl-logo">
+                <a href="{% url 'home' %}"><img src="{% static 'assets/img/logo/logo1.png' %}" alt="Auxichron Health Logo" /></a>
+              </div>
+            </div>
+            <div class="col-lg-7 d-none d-lg-block">
+              <div class="vl-main-menu text-center">
+                <nav class="vl-mobile-menu-active">
+                  <ul>
+                    <li>
+                      <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'home' %}#about">About Us</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'home' %}#services">Services</a>
+                    </li>
+                    <li>
+                      <a href="{% url 'home' %}#appointment">Appointments</a>
+                    </li>
+                    <li class="has-dropdown">
+                      <a href="#">Community <span class="arrow-size"><i class="fa-solid fa-angle-down d-lg-inline d-none"></i></span></a>
+                      <ul class="sub-menu">
+                        <li>
+                          <a href="{% url 'home' %}#blog">Blog & Resources</a>
+                        </li>
+                        <li>
+                          <a href="{% url 'contact' %}">Contact us</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+              <div class="vl-hero-btn d-none d-lg-block text-end">
+                <div class="btn-area1">
+                  <a href="{% url 'contact' %}" class="vl-btn4">
+                    Get Started<span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="vl-header-action-item d-block d-lg-none">
+                <button type="button" class="vl-offcanvas-toggle"><i class="fa-solid fa-bars-staggered"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===== HEADER END ======= -->
+
+    <!-- ===== MOBILE HEADER STARTS ======= -->
+    <div class="homepage4-body">
+      <div class="vl-offcanvas">
+        <div class="vl-offcanvas-wrapper">
+          <div class="vl-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+            <div class="vl-offcanvas-logo">
+              <a href="{% url 'home' %}"><img src="{% static 'assets/img/logo/auxichron white.png' %}" alt="" /></a>
+            </div>
+            <div class="vl-offcanvas-close">
+              <button class="vl-offcanvas-close-toggle"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+          </div>
+
+          <div class="vl-offcanvas-menu d-lg-none mb-40">
+            <nav></nav>
+          </div>
+
+          <div class="space20"></div>
+          <div class="vl-offcanvas-info">
+            <h3 class="vl-offcanvas-sm-title">Contact Us</h3>
+            <div class="space20"></div>
+            <span><a href="#"><i class="fa-regular fa-envelope"></i>+2349059940348</a></span>
+            <span><a href="#"><i class="fa-solid fa-phone"></i>auxichronhealth.com</a></span>
+            <span><a href="#"><i class="fa-solid fa-location-dot"></i></a></span>
+          </div>
+          <div class="space20"></div>
+          <div class="vl-offcanvas-social">
+            <h3 class="vl-offcanvas-sm-title">Follow Us</h3>
+            <div class="space20"></div>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="vl-offcanvas-overlay"></div>
+    </div>
+    <!-- ===== MOBILE HEADER STARTS ======= -->
+
+    <!-- ===== HERO AREA STARTS ======= -->
+    <div class="inner-header-section-area" style="background-image: url({% static 'assets/img/all-images/bg/bg9.png' %}); background-position: center; background-repeat: no-repeat; background-size: cover;">
+      <img src="{% static 'assets/img/elements/elements28.png' %}" alt="" class="elements28" />
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="hero-header">
+              <h1 class="text-anime-style-1">Contact Us</h1>
+              <div class="space28"></div>
+              <a href="index.html" class="bradecrumb">Home <i class="fa-solid fa-angle-right"></i> Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== HERO AREA ENDS ======= -->
+
+    <!-- ===== CONTACT AREA STARTS ======= -->
+    <div class="contact-inner-section-area sp2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 m-auto">
+            <div class="heading4 text-center space-margin60">
+              <h5 class="vl-section-subtitle">
+                Auxichron Health<span>|</span> Caring for Your Community<svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+                  <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+                </svg>
+              </h5>
+              <div class="space24"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="images image-anime reveal">
+              <img src="{% static 'assets/img/all-images/contact/contact-img3.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="1000">
+            <div class="contact-boxarea">
+              <h4>Send Us A Message</h4>
+              <div class="space20"></div>
+              <div class="space6"></div>
+              <form id="appointmentForm" method="post">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input type="text" name="full_name" placeholder="Full Name*" />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input type="number" name="phone_number" placeholder="Phone Number*" />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input type="email" name="email" placeholder="Email Address*" />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <select name="service_type" id="country" class="country-area nice-select">
+                        <option value="1" data-display="Service Type">Service Type</option>
+                        <option value="Health">Health Plans</option>
+                        <option value="virtual">Virtual & In-Person Consults</option>
+                        <option value="medication">Medication Management</option>
+                        <option value="procurement">On-Demand Procurement</option>
+                        <option value="support">Disease Support Groups</option>
+                        <option value="specialized">Specialized Care Links</option>
+                        <option value="wellness">Corporate Wellness Programs</option>
+                        <option value="education">Health Education Campaigns</option>
+                        <option value="outreach">Community Outreach</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="input-area">
+                      <textarea name="message" placeholder="Your Message"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="space10"></div>
+                    <div class="input-area">
+                      <button style="text-align: center;" type="submit" class="btn btn-info text-white">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== CONTACT AREA ENDS ======= -->
+
+    <!-- ===== CTA AREA STARTS ======= -->
+    <section class="cta4-section-area" style="background-image: url({% static 'assets/img/all-images/bg/bg5.png' %}); background-position: center; background-size: cover; background-repeat: no-repeat;">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Column -->
+          <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-left" data-aos-duration="800">
+            <div class="cta-content-area heading1">
+              <h2 class="text-anime-style-3">Join Our Health Provider Network!</h2>
+              <div class="space16"></div>
+              <p data-aos="fade-left" data-aos-duration="900">Collaborate. Care. Create Impact. Are you a licensed health professional passionate about long-term care? Auxichron Health welcomes doctors, pharmacists, nurses, physiotherapists, optometrists, psychologists, dietitians, and more into our growing network. Be part of a connected care system that supports prevention, diagnosis, management, and empowerment.</p>
+              <div class="space16"></div>
+              <ul class="cta-benefits" data-aos="fade-left" data-aos-duration="1000">
+                <li>
+                  <i class="fas fa-check-circle"></i> Flexible consultations (virtual & physical)
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Earn extra income
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Increased patient access
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Professional collaboration
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Training and visibility
+                </li>
+              </ul>
+              <div class="space24"></div>
+              <div class="btn-area1">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSetnNrwMn8tu9GDyY2DGZOwRJ9BKigpvrltjnn-CGlnW84iEg/viewform" class="vl-btn4" data-aos="fade-up" data-aos-duration="1100">
+                  Apply to Join Now
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white" />
+                    </svg>
+                  </span>
+                </a>
+                <a href="tel:+2349059940348" class="phone" data-aos="fade-up" data-aos-duration="1200">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_5825_4343)">
+                      <path d="M4.32688 1.17598C4.79912 1.27359 5.1752 1.59087 5.40887 2.01006L6.15321 3.34544C6.42738 3.83727 6.65811 4.25117 6.80878 4.61098C6.96862 4.99266 7.06355 5.36904 7.02016 5.78518C6.97676 6.20131 6.80622 6.55001 6.57107 6.8905C6.3494 7.21148 6.03823 7.56888 5.66848 7.99356L4.57431 9.25038C4.37824 9.47563 4.2802 9.58821 4.27124 9.72896C4.26228 9.86971 4.34263 9.98996 4.50333 10.2304C5.87299 12.2796 7.71894 14.1262 9.76983 15.497C10.0103 15.6577 10.1305 15.738 10.2712 15.7291C10.412 15.7201 10.5247 15.6221 10.7498 15.426L12.0067 14.3318C12.4314 13.962 12.7888 13.6509 13.1098 13.4292C13.4502 13.194 13.799 13.0235 14.2151 12.9801C14.6312 12.9367 15.0077 13.0317 15.3893 13.1915C15.7491 13.3422 16.163 13.5729 16.6547 13.847L17.9902 14.5915C18.4094 14.8251 18.7267 15.2012 18.8243 15.6734C18.9229 16.1505 18.7775 16.6302 18.4562 17.0244C17.2904 18.4547 15.4227 19.3654 13.4633 18.9701C12.259 18.7272 11.0707 18.3225 9.63342 17.4982C6.74558 15.842 4.15636 13.2514 2.50212 10.367C1.67786 8.92963 1.2731 7.74134 1.03015 6.53696C0.634898 4.5776 1.54559 2.70987 2.9759 1.54412C3.37009 1.22284 3.84971 1.07736 4.32688 1.17598Z" fill="#02015A" />
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3062 1.54C11.4337 1.0978 11.8957 0.842779 12.3379 0.970388C15.5607 1.90041 18.099 4.43862 19.0292 7.66132C19.1567 8.1035 18.9017 8.56545 18.4596 8.69304C18.0174 8.8207 17.5554 8.5657 17.4278 8.1235C16.6565 5.45101 14.5483 3.34295 11.8757 2.57171C11.4336 2.4441 11.1786 1.98219 11.3062 1.54ZM10.7947 5.47187C10.9747 5.04825 11.4639 4.85066 11.8876 5.03055C13.2723 5.6186 14.381 6.72725 14.969 8.11199C15.1489 8.53562 14.9513 9.02487 14.5277 9.20479C14.1041 9.38462 13.6148 9.18704 13.4349 8.76345C13.0157 7.77614 12.2234 6.9839 11.2361 6.56463C10.8125 6.38474 10.6149 5.8955 10.7947 5.47187Z" fill="#02015A" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5825_4343">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>+2349059940348
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Image Column -->
+          <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right" data-aos-duration="900">
+            <div class="cta-circle-area">
+              <div class="bg1">
+                <img src="{% static 'assets/img/all-images/bg/cta-bg1.png' %}" alt="CTA Background" class="cta-bg1" />
+              </div>
+              <div class="img1">
+                <img src="{% static 'assets/img/all-images/cta/cta-img4.png' %}" alt="CTA Image" class="cta-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline CSS for styling -->
+    </section>
+    <!-- ===== CTA AREA ENDS ======= -->
+
+    <!-- ===== FOOTER AREA STARTS ======= -->
+    <div class="vl-footer4-section-area mb-0" style="background-image: url({% static 'assets/img/all-images/bg/bg4.png' %}); background-position: center; background-repeat: no-repeat; background-size: cover;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6">
+            <div class="footer-description-area">
+              <img src="{% static 'assets/img/logo/footer_img.png' %}" alt="Auxichron Health Logo" class="footer-logo" data-aos="fade-up" data-aos-duration="800" />
+              <div class="space24"></div>
+              <p data-aos="fade-up" data-aos-duration="900">Auxichron was born to fill that gap - to create connected, coordinated, and compassionate care that empowers individuals to live fully, not just manage symptoms.</p>
+              <div class="space28"></div>
+              <div class="footer-form-area">
+                <form action="#">
+                  <input type="email" placeholder="Enter Your Email" aria-label="Email for Auxichron Health newsletter subscription" />
+                  <button type="submit" class="vl-btn4" data-aos="fade-up" data-aos-duration="1000">
+                    Subscribe Now
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white" />
+                      </svg>
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg col-md-6">
+            <div class="space30 d-md-none d-block"></div>
+            <div class="footer-widget-area foot-padding1">
+              <h3 data-aos="fade-up" data-aos-duration="800">Quick Links</h3>
+              <ul>
+                <li>
+                  <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li>
+                  <a href="{% url 'home' %}#about">About Us</a>
+                </li>
+                <li>
+                  <a href="{% url 'home' %}#services">Services</a>
+                </li>
+                <li>
+                  <a href="{% url 'home' %}#blog">Blog & Resources</a>
+                </li>
+         
+                <li>
+                  <a href="{% url 'contact' %}">Appointments</a>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6">
+            <div class="space30 d-lg-none d-block"></div>
+            <div class="footer-widget-area foot-padding2">
+              <h3 data-aos="fade-up" data-aos-duration="800">Popular Services</h3>
+              <ul>
+                <li>
+                  <a href="{% url 'home' %}#services">Consultations</a>
+                </li>
+                <li>
+                  <a href="{% url 'home' %}#services">Telehealth</a>
+                </li>
+                <li>
+                  <a href="{% url 'home' %}#services">Wellness Programs</a>
+                </li>
+                <li>
+                  <a href="{% url 'home' %}#services">Diagnostics</a>
+                </li>
+                <li>
+                  <a href="{% url 'home' %}#services">Therapies</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6">
+            <div class="space30 d-lg-none d-block"></div>
+            <div class="footer-widget-area">
+              <h3 data-aos="fade-up" data-aos-duration="800">Contact Us</h3>
+              <ul>
+                <li>
+                  <a href="tel:+11234567890">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M14.05 6C15.0268 6.19057 15.9244 6.66826 16.6281 7.37194C17.3318 8.07561 17.8095 8.97326 18 9.95M14.05 2C16.0793 2.22544 17.9716 3.13417 19.4163 4.57701C20.8609 6.01984 21.7721 7.91101 22 9.94M18.5 21C9.93959 21 3 14.0604 3 5.5C3 5.11378 3.01413 4.73086 3.04189 4.35173C3.07375 3.91662 3.08968 3.69907 3.2037 3.50103C3.29814 3.33701 3.4655 3.18146 3.63598 3.09925C3.84181 3 4.08188 3 4.56201 3H7.37932C7.78308 3 7.98496 3 8.15802 3.06645C8.31089 3.12515 8.44701 3.22049 8.55442 3.3441C8.67601 3.48403 8.745 3.67376 8.88299 4.05321L10.0491 7.26005C10.2096 7.70153 10.2899 7.92227 10.2763 8.1317C10.2643 8.31637 10.2012 8.49408 10.0942 8.64506C9.97286 8.81628 9.77145 8.93713 9.36863 9.17882L8 10C9.2019 12.6489 11.3501 14.7999 14 16L14.8212 14.6314C15.0629 14.2285 15.1837 14.0271 15.3549 13.9058C15.5059 13.7988 15.6836 13.7357 15.8683 13.7237C16.0777 13.7101 16.2985 13.7904 16.74 13.9509L19.9468 15.117C20.3262 15.255 20.516 15.324 20.6559 15.4456C20.7795 15.553 20.8749 15.6891 20.9335 15.842C21 16.015 21 16.2169 21 16.6207V19.438C21 19.9181 21 20.1582 20.9007 20.364C20.8185 20.5345 20.663 20.7019 20.499 20.7963C20.3009 20.9103 20.0834 20.9262 19.6483 20.9581C19.2691 20.9859 18.8862 21 18.5 21Z" stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>+2349059940348
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>Nigeria
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@auxichronhealth.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M4 18L9 12M20 18L15 12M3 8L10.225 12.8166C10.8665 13.2443 11.1872 13.4582 11.5339 13.5412C11.8403 13.6147 12.1597 13.6147 12.4661 13.5412C12.8128 13.4582 13.1335 13.2443 13.775 12.8166L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z" stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>info@auxichronhealth.com
+                  </a>
+                </li>
+              </ul>
+              <div class="space20"></div>
+               <ul class="social-links">
+                  <li><a href="https://www.facebook.com/profile.php?id=100082807493200" aria-label="Follow Auxichron Health on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/chronmate-app/" aria-label="Follow Auxichron Health on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://www.instagram.com/auxichron?igsh=MTV4ZGFmaDU1dzZncQ==" aria-label="Follow Auxichron Health on Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                
+            
+                  <li><a href="https://wa.me/2349059940348" aria-label="Follow Auxichron Health on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="space100"></div>
+        <div class="col-lg-12">
+          <div class="copyright-area">
+            <a href="#">© Copyright 2025 Auxichron Health. All Rights Reserved</a>
+            <ul>
+              <li>
+                <a href="#">Privacy Policy</a><span>|</span>
+              </li>
+              <li>
+                <a href="#">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== FOOTER AREA ENDS ======= -->
+
+    <!-- ===== FLOATING ACTION BUTTON SECTION STARTS ======= -->
+    <div class="fab-container" aria-hidden="true">
+      <h2 class="visually-hidden">Quick Actions with Auxichron Health</h2>
+      <button class="fab-toggle d-lg-none" aria-label="Toggle Action Menu"><i class="fa-solid fa-plus"></i></button>
+      <div class="fab-buttons">
+        <a href="{% url 'contact' %}" class="fab-button" title="Book an Appointment with Auxichron Health" aria-label="Book an Appointment with Auxichron Health" data-aos="fade-up" data-aos-duration="800">
+          <i class="fa-solid fa-calendar-alt"></i>
+          <span class="fab-label">Book Appointment</span>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX3kxWR3iO5DMxpGXLYOdqTm4qSXAzK0EoRDc7bjrAN5vw3w/viewform" class="fab-button" title="Donate to Auxichron Health" aria-label="Donate to Auxichron Health" data-aos="fade-up" data-aos-duration="900">
+          <i class="fa-solid fa-heart"></i>
+          <span class="fab-label">Donate</span>
+        </a>
+        <a href="{% url 'partnerships' %}" class="fab-button" title="Partner with Auxichron Health" aria-label="Partner with Auxichron Health" data-aos="fade-up" data-aos-duration="1000">
+          <i class="fa-solid fa-handshake"></i>
+          <span class="fab-label">Partner with Us</span>
+        </a>
+      </div>
+    </div>
+    <!-- ===== FLOATING ACTION BUTTON SECTION ENDS ======= -->
+
+    <!-- Loading Overlay Spinner -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+      <div class="spinner-container">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="text-center mt-2" style="color: #02015A; font-weight: 500;">Processing your request...</p>
+      </div>
+    </div>
+
+    <!-- ===== JS SCRIPT LINK ======= -->
+    <script src="{% static 'assets/js/plugins/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/fontawesome.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/aos.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/counter.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/gsap.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/Splitetext.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/SmoothScroll.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/sidebar.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/magnific-popup.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/mobilemenu.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/owlcarousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/nice-select.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/waypoints.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/slick-slider.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/circle-progress.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/swiper.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+    
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+  $(document).ready(function() {
+    $('#appointmentForm').on('submit', function(e) {
+      e.preventDefault();
+
+      // Show the loading overlay
+      $('#loadingOverlay').show();
+
+      const formData = {
+        full_name: $('input[name="full_name"]').val(),
+        phone_number: $('input[name="phone_number"]').val(),
+        email: $('input[name="email"]').val(),
+        service_type: $('.nice-select').val() || 'Not specified',
+        message: $('textarea[name="message"]').val()
+      };
+
+      $.ajax({
+        url: '{% url "book_appointment" %}',
+        type: 'POST',
+        data: formData,
+        headers: {
+          'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+        },
+        success: function(response) {
+          $('#loadingOverlay').hide(); // Hide the overlay on success
+          if (response.success) {
+            Swal.fire({
+              icon: 'success',
+              title: 'Success!',
+              text: response.message,
+              confirmButtonText: 'OK'
+            }).then(() => {
+              $('#appointmentForm')[0].reset();
+            });
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: response.message,
+              confirmButtonText: 'OK'
+            });
+            console.error('Server response:', response.message);
+          }
+        },
+        error: function(xhr, status, error) {
+          $('#loadingOverlay').hide(); // Hide the overlay on error
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'There was an error processing your request. Please try again later.',
+            confirmButtonText: 'OK'
+          });
+          console.error('AJAX Error:', status, error);
+        }
+      });
+    });
+  });
+</script>
+
+    <!-- CSS for Loading Overlay -->
+    <style>
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 1050; /* Ensure it’s above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spinner-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+</style>
+  </body>
+</html>

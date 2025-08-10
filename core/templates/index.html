@@ -1,0 +1,1763 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auxichron Health | Healthcare Services & Solutions</title>
+  <meta name="description"
+    content="Auxichron Health provides innovative healthcare services, connecting patients, providers, partners, and investors to improve health outcomes.">
+  <meta name="keywords"
+    content="Auxichron Health, healthcare services, medical solutions, patient care, healthcare providers, health innovation">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Auxichron Health">
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="Auxichron Health | Healthcare Services & Solutions">
+  <meta property="og:description"
+    content="Discover Auxichron Health's mission to deliver innovative healthcare services and connect with patients, providers, and partners.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.auxichronhealth.com">
+  <meta property="og:image" content="{% static 'assets/img/logo/auxichron-logo.png' %}">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Auxichron Health | Healthcare Services & Solutions">
+  <meta name="twitter:description"
+    content="Discover Auxichron Health's mission to deliver innovative healthcare services and connect with patients, providers, and partners.">
+  <meta name="twitter:image" content="{% static 'assets/img/logo/auxichron-logo.png' %}">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'assets/img/logo/auxichron-fav.png' %}" type="image/x-icon">
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/magnific-popup.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/owlcarousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/sidebar.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/slick-slider.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/nice-select.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- JS Script -->
+  <script src="{% static 'assets/js/plugins/jquery-3-7-1.min.js' %}"></script>
+  <!-- Schema Markup for Organization -->
+  <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "Organization",
+       "name": "Auxichron Health",
+       "url": "https://www.auxichronhealth.com",
+       "logo": "{% static 'assets/img/logo/auxichron-logo.png' %}",
+       "description": "Auxichron Health is a digital hub providing innovative healthcare services, connecting patients, healthcare providers, partners, and investors to improve health outcomes.",
+       "contactPoint": {
+         "@type": "ContactPoint",
+         "telephone": "+1-123-456-7890",
+         "contactType": "Customer Service",
+         "email": "info@auxichronhealth.com",
+         "areaServed": "Global"
+       }
+     }
+     </script>
+
+
+<style>/* General Section Styles */
+.section-area {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.vl-section-subtitle {
+  font-size: 16px;
+  color: #02015A;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vl-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #02015A;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.space24 { height: 24px; }
+.space16 { height: 16px; }
+
+/* Signup Now Section */
+.signup-text-area {
+  padding: 30px;
+  max-width: 500px;
+}
+
+.phone-image-area {
+  padding: 30px;
+}
+
+.phone-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Choose & Who We Serve Shared Styles */
+.content-area.card {
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e9ecef;
+}
+
+.content-area.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.icon-area {
+  font-size: 40px;
+  color: #4416FF;
+  margin-bottom: 20px;
+}
+
+.content-area .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #02015A;
+  margin-bottom: 10px;
+}
+
+.content-area p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.readmore.btn {
+  font-size: 14px;
+  padding: 10px 20px;
+  border-color: #4416FF;
+  color: #4416FF;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.readmore.btn:hover {
+  background-color: #4416FF;
+  color: #fff;
+}
+
+.why-choose-list,
+.who-we-serve-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.why-choose-item,
+.who-we-serve-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Our Why Section */
+.elements14.keyframe5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 200px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-list li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.why-list li i {
+  color: #4416FF;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.vl-btn4 {
+  background-color: #4416FF;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.vl-btn4:hover {
+  background-color: #02015A;
+  transform: translateY(-3px);
+}
+
+.team-img10 {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .vl-section-title {
+    font-size: 32px;
+  }
+
+  .section-description,
+  .why-list li {
+    font-size: 16px;
+  }
+
+  .signup-text-area,
+  .phone-image-area,
+  .content-area.card {
+    padding: 24px;
+  }
+
+  .why-choose-item,
+  .who-we-serve-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .content-area.card {
+    max-width: 100%;
+  }
+
+  .content-area .title {
+    font-size: 20px;
+  }
+
+  .content-area p {
+    font-size: 15px;
+  }
+
+  .vl-btn4 {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-text-area {
+    text-align: center;
+  }
+
+  .vl-section-subtitle {
+    justify-content: center;
+  }
+
+  .text-ani {
+    margin-top: -100px; /* Consider clarifying or removing if not used */
+  }
+
+  .signup-text-area,
+  .phone-image-area {
+    padding: 20px;
+  }
+
+  .vl-section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vl-section-title {
+    font-size: 28px;
+  }
+
+  .section-description,
+  .why-list li {
+    font-size: 14px;
+  }
+
+  .why-choose-item,
+  .who-we-serve-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .content-area.card {
+    padding: 20px;
+  }
+
+  .vl-btn4 {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .elements14.keyframe5 {
+    max-width: 150px;
+  }
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 1050; /* Ensure it’s above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spinner-container {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+}
+
+.tab-link-area {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.tab-link {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.tab-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+</style>
+</head>
+
+
+
+  <!--===== HEADER START =======-->
+  <header class="homepage4-body">
+    <div id="vl-header-sticky" class="vl-header-area vl-transparent-header">
+      <div class="container">
+        <div class="row align-items-center row-bg1">
+          <div class="col-lg-2 col-md-6 col-6">
+            <div class="vl-logo">
+              <a href="{% url 'home' %}"><img src="{% static 'assets/img/logo/logo1.png' %}" alt="Auxichron Health Logo"></a>
+            </div>
+          </div>
+          <div class="col-lg-7 d-none d-lg-block">
+            <div class="vl-main-menu text-center">
+              <nav class="vl-mobile-menu-active">
+                <ul>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'home' %}#about">About Us</a></li>
+                  <li><a href="{% url 'home' %}#services">Services</a></li>
+                  <li><a href="{% url 'home' %}#appointment">Appointments</a></li>
+                  <li class="has-dropdown">
+                    <a href="#">Community <span class="arrow-size"><i
+                          class="fa-solid fa-angle-down d-lg-inline d-none"></i></span></a>
+                    <ul class="sub-menu">
+                      <li><a href="{% url 'home' %}#blog">Blog & Resources</a></li>
+                      <li><a href="{% url 'contact' %}">Contact us</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-6">
+            <div class="vl-hero-btn d-none d-lg-block text-end">
+              <div class="btn-area1">
+                <a href="{% url 'contact' %}" class="vl-btn4">Get Started<span><svg xmlns="http://www.w3.org/2000/svg"
+                      width="22" height="22" viewBox="0 0 22 22" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z"
+                        fill="white" />
+                    </svg></span></a>
+              </div>
+            </div>
+            <div class="vl-header-action-item d-block d-lg-none">
+              <button type="button" class="vl-offcanvas-toggle">
+                <i class="fa-solid fa-bars-staggered"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--===== HEADER END =======-->
+
+  <!--===== MOBILE HEADER STARTS =======-->
+  <div class="homepage4-body">
+    <div class="vl-offcanvas">
+      <div class="vl-offcanvas-wrapper">
+        <div class="vl-offcanvas-header d-flex justify-content-between align-items-center mb-90">
+          <div class="vl-offcanvas-logo">
+            <a href="{% url 'home' %}"><img src="{% static 'assets/img/logo/auxichron white.png' %}" alt=""></a>
+          </div>
+          <div class="vl-offcanvas-close">
+            <button class="vl-offcanvas-close-toggle"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+
+        <div class="vl-offcanvas-menu d-lg-none mb-40">
+          <nav></nav>
+        </div>
+
+        <div class="space20"></div>
+        <div class="vl-offcanvas-info">
+          <h3 class="vl-offcanvas-sm-title">Contact Us</h3>
+          <div class="space20"></div>
+          <span><a href="#"> <i class="fa-regular fa-envelope"></i>+2349059940348</a></span>
+          <span><a href="#"><i class="fa-solid fa-phone"></i>auxichronhealth.com</a></span>
+          <span><a href="#"><i class="fa-solid fa-location-dot"></i></a></span>
+        </div>
+        <div class="space20"></div>
+        <div class="vl-offcanvas-social">
+          <h3 class="vl-offcanvas-sm-title">Follow Us</h3>
+          <div class="space20"></div>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+      </div>
+    </div>
+    <div class="vl-offcanvas-overlay"></div>
+  </div>
+
+    
+  
+  <!--===== HERO AREA STARTS =======-->
+  <div class="hero4-section-area mt-0"
+    style="background-image: url({% static 'assets/img/all-images/bg/hero-bg3.png' %}); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 ">
+          <div class="hero-header heading4">
+           
+          </h5>
+            <div class="space16"></div>
+            <h2  class="text-anime-style-3 text-ani ">Connected, holistic care throughout your health journey</h2>
+            <div class="space20"></div>
+            <p data-aos="fade-left" data-aos-duration="900">Whether you're preventing illness, navigating a diagnosis, managing medications, or seeking support, Auxichron provides a connected network of care that helps you through your health journey. 
+            </p>
+            <div class="space40"></div>
+           
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero4-images-area">
+            <div class="bg-area">
+              <img src="{% static 'assets/img/all-images/bg/hero-bg2.png' %}" alt="Auxichron Health Hero Background" class="hero-bg2">
+            </div>
+            <div class="img1 text-end">
+              <img src="{% static 'assets/img/all-images/hero/hero-img7.png' %}" alt="Auxichron Health Care Provider">
+            </div>
+            <div class="icons-area">
+              <div class="icons1">
+                <img src="{% static 'assets/img/icons/hero-icon1.svg' %}" alt="Healthcare Icon 1">
+              </div>
+              <div class="icons2">
+                <img src="{% static 'assets/img/icons/hero-icon2.svg' %}" alt="Healthcare Icon 2">
+              </div>
+              <div class="icons3">
+                <img src="{% static 'assets/img/icons/hero-icon3.svg' %}" alt="Healthcare Icon 3">
+              </div>
+              <div class="icons4">
+                <img src="{% static 'assets/img/icons/hero-icon4.svg' %}" alt="Healthcare Icon 4">
+              </div>
+              <div class="icons5">
+                <img src="{% static 'assets/img/icons/hero-icon1.svg' %}" alt="Healthcare Icon 5">
+              </div>
+              <div class="icons6">
+                <img src="{% static 'assets/img/icons/hero-icon3.svg' %}" alt="Healthcare Icon 6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== HERO AREA ENDS =======-->
+
+
+
+<!--===== SIGN UP NOW AREA STARTS =======-->
+<section id="signup-now" class="signup-now-section-area sp6">
+  <div class="container">
+    <!-- Text and Image Row -->
+    <div class="row justify-content-center align-items-center">
+      <!-- Text Column -->
+      <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right" data-aos-duration="800">
+        <div class="signup-text-area">
+          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span> Stay Updated 
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+            </svg>
+          </h5>
+          <div class="space24"></div>
+          <h2 class="vl-section-title text-anime-style-3">Sign Up Now to Get First-Hand Updates About Our Mobile App!</h2>
+          <div class="space16"></div>
+          <p class="section-description">Stay in the loop and be the first to experience our innovative mobile app, delivering personalized healthcare solutions.</p>
+        
+              <!-- Tab Link Area -->
+        <div class="tab-link-area mt-3">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdEoj49UuPZSDcjdy0ZgAJt6pZE_o_Y8cBcMW08teEKfNeGSg/viewform" class="tab-link">Click To Sign Up</a>
+        </div>
+        </div>
+     
+      </div>
+      <!-- Phone App Image Column -->
+      <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-left" data-aos-duration="900">
+        <div class="phone-image-area text-center">
+          <img src="{% static 'assets/img/logo/phone_img.png' %}" alt="Auxichron Mobile App" class="phone-image img-fluid">
+          <!-- WhatsApp Chat Button -->
+          <div class="mt-4">
+            <a href="https://wa.me/2349059940348" target="_blank" class="btn btn-success" style="padding: 12px 24px; font-size: 16px; border-radius: 30px;">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== SIGN UP NOW AREA ENDS =======-->
+
+
+
+
+
+  
+
+  
+  <!--===== ABOUT AREA STARTS =======-->
+  <div id="about" class="about4-section-area mb-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="about-images-area">
+            <div class="img1 image-anime reveal">
+              <img src="{% static 'assets/img/all-images/about/auxichron-about-img.png' %}" alt="Auxichron Health Team">
+            </div>
+            <div class="img2">
+              <img src="{% static 'assets/img/elements/elements18.png' %}" alt="Auxichron Health Decorative Element"
+                class="elements18 keyframe5">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <d class="about4-heading heading4">
+            <h5 class="vl-section-subtitle" data-aos="fade-left" data-aos-duration="800">Auxichron Health<span> |
+              </span> About Us <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8"
+                fill="none">
+                <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A"
+                  stroke-width="1.5" />
+              </svg>
+            </h5>
+            <div class="space24"></div>
+            <h2 class="vl-section-title text-anime-style-3">Accessible, Coordinated, Long-term Care</h2>
+            <div class="space24"></div>
+            <p data-aos="fade-left" data-aos-duration="900">Auxichron Health   is a digital healthcare solution built for individuals living with chronic conditions or needing long-term medical, psychological and social support. We provide a network of health providers/specialists, medication delivery and management services and and support groups on several disease areas built to help you thrive in good health. Whether it’s a one-time concern or a second opinion, you can book flexible consultations with trusted professionals - anytime, anywhere.</p>
+            
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===== ABOUT AREA ENDS =======-->
+
+
+    <div class="slider4-section-area mt-2 mb-5">
+      <div class="marquee-wrap">
+        <div class="marquee-text">
+          <div class="brand-single-box">
+            <h3><img src="{% static 'assets/img/elements/elements1.png' %}" alt="Auxichron Health Innovation Icon"> Personalized
+              Digital Care</h3>
+          </div>
+          <div class="brand-single-box">
+            <h3><img src="{% static 'assets/img/elements/elements1.png' %}" alt="Auxichron Health Innovation Icon"> Expert Digital
+              Network</h3>
+          </div>
+          <div class="brand-single-box">
+            <h3><img src="{% static 'assets/img/elements/elements1.png' %}" alt="Auxichron Health Innovation Icon"> Cutting-Edge
+              Technology</h3>
+          </div>
+          <div class="brand-single-box">
+            <h3><img src="{% static 'assets/img/elements/elements1.png' %}" alt="Auxichron Health Innovation Icon"> Proactive Health
+              Solutions</h3>
+          </div>
+          <div class="brand-single-box">
+            <h3><img src="{% static 'assets/img/elements/elements1.png' %}" alt="Auxichron Health Innovation Icon"> Patient-Empowered
+              Platform</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+      <!--===== SERVICE AREA STARTS =======-->
+        <div id="services" class="service4-section-area sp1">
+          <img src="{% static 'assets/img/elements/elements12.png' %}" alt="Auxichron Health Decorative Element"
+            class="elements12 keyframe5">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 m-auto">
+                <div class="heading4 text-center space-margin60">
+                  <h5 class="vl-section-subtitle">Auxichron Health<span> | </span> Services <svg
+                      xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+                      <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992"
+                        stroke="#02015A" stroke-width="1.5" />
+                    </svg>
+                  </h5>
+                  <div class="space24"></div>
+                  <h2 class="vl-section-title text-anime-style-3">Our Comprehensive Healthcare Services</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="service4-slider-area owl-carousel">
+                  <div class="service4-boxarea">
+                    <div class="content-area">
+                      <a href="" class="title">Medical Consultations</a>
+                      <div class="space16"></div>
+                      <p>Access virtual and in-person consultations with expert healthcare professionals.</p>
+                      <div class="space24"></div>
+                     
+                    </div>
+                    <div class="img1 image-anime">
+                      
+                      <img src="{% static 'assets/img/all-images/service/service-img100.jpg' %}" alt="Medical Consultations Image">
+                    </div>
+                  </div>
+
+                  <div class="service4-boxarea">
+                    <div class="content-area">
+                      <a href="" class="title">Personalized Health Coaching</a>
+                      <div class="space16"></div>
+                      <p>Receive tailored guidance to achieve your health goals with expert coaching.</p>
+                      <div class="space24"></div>
+                     
+                    </div>
+                    <div class="img1 image-anime">
+                      <img src="{% static 'assets/img/all-images/service/service-img26.webp' %}" alt="Personalized Health Coaching Image">
+                    </div>
+                  </div>
+
+                  <div class="service4-boxarea">
+                    <div class="content-area">
+                      <a href="" class="title">Medication Delivery and Therapy Management</a>
+                      <div class="space16"></div>
+                      <p>Convenient medication delivery and expert management for optimal therapy outcomes.</p>
+                      <div class="space24"></div>
+                     
+                    </div>
+                    <div class="img1 image-anime">
+                      <img src="{% static 'assets/img/all-images/service/service-img18.jpg' %}" alt="Medication Delivery and Therapy Management Image">
+                    </div>
+                  </div>
+
+                  <div class="service4-boxarea">
+                    <div class="content-area">
+                      <a href="" class="title">Support Groups on Diverse Health Conditions</a>
+                      <div class="space16"></div>
+                      <p>Join supportive communities to share experiences and learn about various health conditions.</p>
+                      <div class="space24"></div>
+                     
+                    </div>
+                    <div class="img1 image-anime">
+                      <img src="{% static 'assets/img/all-images/service/service-img21.webp' %}" alt="Support Groups on Diverse Health Conditions Image">
+                    </div>
+                  </div>
+
+                  <div class="service4-boxarea">
+                    <div class="content-area">
+                      <a href="" class="title">Institutional Wellness Programs</a>
+                      <div class="space16"></div>
+                      <p>Customized wellness initiatives to enhance health and productivity in organizations.</p>
+                      <div class="space24"></div>
+                     
+                    </div>
+                    <div class="img1 image-anime">
+                      <img src="{% static 'assets/img/all-images/service/service-img23.jpg' %}" alt="Institutional Wellness Programs Image">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== SERVICE AREA ENDS =======-->
+
+
+
+
+        
+<!--===== WORKS AREA STARTS =======-->
+        <div class="works4-section-area mt-5 pt-5 ">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 m-auto">
+                <div class="heading4 text-center space-margin60">
+                  <h5 class="vl-section-subtitle">Auxichron Health<span> | </span>Start With Us<svg
+                      xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+                      <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992"
+                        stroke="#02015A" stroke-width="1.5" />
+                    </svg>
+                  </h5>
+                  <div class="space24"></div>
+                  <h2 class="vl-section-title text-anime-style-3">Get started.</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12" data-aos="zoom-out" data-aos-duration="1200">
+                <div class="cs_case_study_1_list">
+                  <div class="cs_case_study cs_style_1 cs_hover_active active" data-aos="fade-up"
+                    data-aos-duration="800">
+                
+                    <div class="content-area1">
+                      <div class="arrow">
+                        <a href="#">1</a>
+                      </div>
+                      <div class="text">
+                        <a >Book a Consultation</a>
+                      </div>
+                    </div>
+                    <div class="content-area">
+                      <div class="arrow2">
+                        <a href="#">1</a>
+                      </div>
+                      <div class="space32"></div>
+                      <a  class="head">Book a Consultation</a>
+                      <div class="space16"></div>
+                      <p>You can have a one-time chat with any health professional. Get started.</p>
+                      <div class="space30"></div>
+                    
+                    </div>
+                  </div>
+                  <div class="cs_case_study cs_style_1 box2 cs_hover_active" data-aos="fade-up" data-aos-duration="900">
+                
+                    <div class="content-area1">
+                      <div class="arrow">
+                        <a href="#">2</a>
+                      </div>
+                      <div class="text">
+                        <a>Choose a Health Plan</a>
+                      </div>
+                    </div>
+                    <div class="content-area">
+                      <div class="arrow2">
+                        <a href="#">2</a>
+                      </div>
+                      <div class="space32"></div>
+                      <a href="" class="head">Choose a Health Plan</a>
+                      <div class="space16"></div>
+                      <p>Access holistic care through our monthly (1, 3, and 6 months) plans that combine consultations, check-ins, health coaching, and medication delivery - all in one.</p>
+                      <div class="space30"></div>
+                  
+                    </div>
+                  </div>
+                  <div class="cs_case_study cs_style_1 box3 cs_hover_active" data-aos="fade-up"
+                    data-aos-duration="1000">
+                  
+                    <div class="content-area1">
+                      <div class="arrow">
+                        <a href="#">3</a>
+                      </div>
+                      <div class="text">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSetnNrwMn8tu9GDyY2DGZOwRJ9BKigpvrltjnn-CGlnW84iEg/viewform">Join Support Groups</a>
+                      </div>
+                    </div>
+                    <div class="content-area">
+                    <div class="arrow2">
+                      <a href="#">3</a>
+                    </div>
+                    <div class="space32"></div>
+                    <a href="" class="head">Join Support Groups</a>
+                    <div class="space16"></div>
+                    <p>
+                      Join support groups of over 10 disease categories in a secured, anonymous environment. Get peer support and share experiences.
+                    </p>
+                    <div class="space30"></div>
+
+                    <!-- New Tab Area -->
+                    <div class="tab-link-area">
+                      <a href="https://docs.google.com/forms/d/e/1FAIpQLSetnNrwMn8tu9GDyY2DGZOwRJ9BKigpvrltjnn-CGlnW84iEg/viewform" class="tab-link">Click To Join</a>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="cs_case_study cs_style_1 box4 cs_hover_active" data-aos="fade-up"
+                    data-aos-duration="1100">
+           
+                    <div class="content-area1">
+                      <div class="arrow">
+                        <a href="#">4</a>
+                      </div>
+                      <div class="text">
+                        <a >Get Medications and Health Supplies</a>
+                      </div>
+                    </div>
+                    <div class="content-area">
+                      <div class="arrow2">
+                        <a href="#">4</a>
+                      </div>
+                      <div class="space32"></div>
+                      <a  class="head">Get Medications and Health Supplies</a>
+                      <div class="space16"></div>
+                      <p>Access medications, nutritional products, supplements, monitoring devices, etc., with free pharmacist guidance.</p>
+                      <div class="space30"></div>
+             
+                    </div>
+                  </div>
+                  <div class="cs_case_study cs_style_1 box5 cs_hover_active" data-aos="fade-up"
+                    data-aos-duration="1200">
+                
+                    <div class="content-area1">
+                      <div class="arrow">
+                        <a href="#">5</a>
+                      </div>
+                      <div class="text">
+                        <a>Access Corporate and Institutional Wellness Programs</a>
+                      </div>
+                    </div>
+                    <div class="content-area">
+                      <div class="arrow2">
+                        <a href="#">5</a>
+                      </div>
+                      <div class="space32"></div>
+                      <a href="" class="head">Access Corporate and Institutional Wellness Programs</a>
+                      <div class="space16"></div>
+                      <p>We provide employee health screenings, disease prevention programs, check-ins, stress and lifestyle management, and long-term care support.</p>
+                      <div class="space30"></div>
+                  
+                    </div>
+                  </div>
+                  <div class="cs_case_study cs_style_1 box6 cs_hover_active" data-aos="fade-up"
+                    data-aos-duration="1300">
+               
+                    <div class="content-area1">
+                      <div class="arrow">
+                        <a href="#">6</a>
+                      </div>
+                      <div class="text">
+                        <a href="">Access Humanitarian Opportunities</a>
+                      </div>
+                    </div>
+                    <div class="content-area">
+                      <div class="arrow2">
+                        <a href="#">6</a>
+                      </div>
+                      <div class="space32"></div>
+                      <a href="" class="head">Access Humanitarian Opportunities</a>
+                      <div class="space16"></div>
+                      <p>Participate in fundraisers, community outreaches, advocacy campaigns, and more to support health and wellness initiatives.</p>
+                      <div class="space30"></div>
+                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== WORKS AREA ENDS =======-->
+
+
+
+
+
+        
+    <!-- ===== CONTACT AREA STARTS ======= -->
+    <div class="contact-inner-section-area sp2 mt-5 mb-2">
+      <div class="container">
+    
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="images image-anime reveal">
+              <img src="{% static 'assets/img/all-images/contact/contact-img3.png' %}" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="1000">
+            <div class="contact-boxarea">
+              <h4>Send Us A Message</h4>
+              <div class="space20"></div>
+              <div class="space6"></div>
+              <form id="appointmentForm" method="post">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input type="text" name="full_name" placeholder="Full Name*" />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input type="number" name="phone_number" placeholder="Phone Number*" />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <input type="email" name="email" placeholder="Email Address*" />
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="input-area">
+                      <select name="service_type" id="country" class="country-area nice-select">
+                        <option value="1" data-display="Service Type">Service Type</option>
+                        <option value="Health">Health Plans</option>
+                        <option value="virtual">Virtual & In-Person Consults</option>
+                        <option value="medication">Medication Management</option>
+                        <option value="procurement">On-Demand Procurement</option>
+                        <option value="support">Disease Support Groups</option>
+                        <option value="specialized">Specialized Care Links</option>
+                        <option value="wellness">Corporate Wellness Programs</option>
+                        <option value="education">Health Education Campaigns</option>
+                        <option value="outreach">Community Outreach</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="input-area">
+                      <textarea name="message" placeholder="Your Message"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="space10"></div>
+                    <div class="input-area">
+                      <button style="text-align: center;" type="submit" class="btn btn-info text-white">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== CONTACT AREA ENDS ======= -->
+
+
+
+        <!--===== WHY CHOOSE AUXICHRON AREA STARTS =======-->
+<section id="why-choose" class="why-choose-section-area mb-3 mt-2" style="padding: 40px 0;">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="heading4 text-center space-margin60">
+          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span> Why Choose Us 
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+            </svg>
+          </h5>
+          <div class="space24"></div>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Why Choose Auxichron Health?</h2>
+          <p class="section-description">Discover the reasons why Auxichron Health is your trusted partner for comprehensive, compassionate, and cutting-edge healthcare.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Items -->
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="why-choose-list row g-4">
+          <!-- Item 1 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" >
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <h4 class="title">Specialized in Long-Term Care</h4>
+              <div class="space16"></div>
+              <p>Expert care for chronic conditions like diabetes, hypertension, asthma, stroke, cancer, and arthritis, tailored to your unique needs.</p>
+              <div class="space16"></div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="650" data-aos-delay="150">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" >
+                <i class="fas fa-wallet"></i>
+              </div>
+              <h4 class="title">Affordable & Accessible</h4>
+              <div class="space16"></div>
+              <p>Healthcare solutions designed to be inclusive and affordable, ensuring everyone can access quality care.</p>
+              <div class="space16"></div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" >
+                <i class="fas fa-user-check"></i>
+              </div>
+              <h4 class="title">Trusted Network</h4>
+              <div class="space16"></div>
+              <p>Verified professionals, licensed pharmacists, and trusted partner facilities ensure top-tier care you can rely on.</p>
+              <div class="space16"></div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="750" data-aos-delay="250">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" >
+                <i class="fas fa-users"></i>
+              </div>
+              <h4 class="title">Strong Support Community</h4>
+              <div class="space16"></div>
+              <p>Our support groups and education programs foster lasting behavior change and community connection.</p>
+              <div class="space16"></div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" >
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h4 class="title">Flexible Access</h4>
+              <div class="space16"></div>
+              <p>Connect with us via WhatsApp, in-app, or phone – we meet you where you are for seamless communication.</p>
+              <div class="space16"></div>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="850" data-aos-delay="350">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" >
+                <i class="fas fa-lock"></i>
+              </div>
+              <h4 class="title">Secure and Private Records</h4>
+              <div class="space16"></div>
+              <p>Your health information is protected with state-of-the-art secure and private record-keeping.</p>
+              <div class="space16"></div>
+            </div>
+          </div>
+          <!-- Item 7 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" >
+                <i class="fas fa-headset"></i>
+              </div>
+              <h4 class="title">24/7 User Support</h4>
+              <div class="space16"></div>
+              <p>Our dedicated team is available around the clock to assist you with any questions or needs.</p>
+              <div class="space16"></div>
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 why-choose-item" data-aos="fade-up" data-aos-duration="950" data-aos-delay="450">
+            <div class="content-area card h-100 shadow-sm" style="min-height: 300px;">
+              <div class="icon-area" >
+                <i class="fas fa-credit-card"></i>
+              </div>
+              <h4 class="title">Flexible Payment Plans</h4>
+              <div class="space16"></div>
+              <p>Choose from a variety of payment options tailored to fit your budget, making healthcare hassle-free.</p>
+              <div class="space16"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== WHY CHOOSE AUXICHRON AREA ENDS =======-->
+
+
+
+
+
+
+
+<!--===== WHO WE SERVE AREA STARTS =======-->
+<section id="who-we-serve" class="who-we-serve-section-area mb-5 m-4 ">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="heading4 text-center space-margin60">
+          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span> Who We Serve 
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+            </svg>
+          </h5>
+          <div class="space24"></div>
+          <h2 class="vl-section-title text-anime-style-3">Who We Serve</h2>
+          <p class="section-description">Auxichron is your partner in continuity of care, providing tailored healthcare solutions to diverse individuals, caregivers, professionals, and organizations.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Who We Serve Items -->
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="who-we-serve-list row g-4">
+          <!-- Item 1 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 who-we-serve-item" data-aos="fade-up" data-aos-duration="800">
+            <div class="content-area card h-100 shadow-sm">
+              <div class="icon-area">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h4 class="title">Individuals with Chronic Conditions</h4>
+              <div class="space16"></div>
+              <p>Living with or at risk of chronic conditions such as diabetes, hypertension, asthma, stroke, cancer, or arthritis? We provide personalized care to manage and improve your health.</p>
+              <div class="space16"></div>
+              
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 who-we-serve-item" data-aos="fade-up" data-aos-duration="900">
+            <div class="content-area card h-100 shadow-sm">
+              <div class="icon-area">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h4 class="title">Individuals Seeking a Healthy Life</h4>
+              <div class="space16"></div>
+              <p>Focused on maintaining a healthy lifestyle and preventing disease? Our preventive care and wellness programs are designed to support your health goals.</p>
+              <div class="space16"></div>
+              
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 who-we-serve-item" data-aos="fade-up" data-aos-duration="1000">
+            <div class="content-area card h-100 shadow-sm">
+              <div class="icon-area">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <h4 class="title">Caregivers</h4>
+              <div class="space16"></div>
+              <p>Families and loved ones supporting long-term care journeys receive guidance, resources, and support to enhance care delivery.</p>
+              <div class="space16"></div>
+              
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 who-we-serve-item" data-aos="fade-up" data-aos-duration="1100">
+            <div class="content-area card h-100 shadow-sm">
+              <div class="icon-area">
+                <i class="fas fa-stethoscope"></i>
+              </div>
+              <h4 class="title">Health Providers</h4>
+              <div class="space16"></div>
+              <p>Licensed professionals offering expert care and consultation collaborate with us to deliver high-quality healthcare services.</p>
+              <div class="space16"></div>
+              
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 who-we-serve-item" data-aos="fade-up" data-aos-duration="1200">
+            <div class="content-area card h-100 shadow-sm">
+              <div class="icon-area">
+                <i class="fas fa-building"></i>
+              </div>
+              <h4 class="title">Institutions</h4>
+              <div class="space16"></div>
+              <p>Schools, hospitals, NGOs, and care facilities needing chronic care solutions benefit from our tailored programs and support.</p>
+              <div class="space16"></div>
+              
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="col-lg-4 col-md-6 col-sm-12 who-we-serve-item" data-aos="fade-up" data-aos-duration="1300">
+            <div class="content-area card h-100 shadow-sm">
+              <div class="icon-area">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h4 class="title">Partners</h4>
+              <div class="space16"></div>
+              <p>Organizations invested in prevention, diagnosis/testing, treatment, and community wellness partner with us to enhance health outcomes.</p>
+              <div class="space16"></div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <h1 class=" vl-section-title text-center mt-5">Auxichron is your partner in continuity of care.</h1>
+
+  </div>
+
+</section>
+<!--===== WHO WE SERVE AREA ENDS =======-->
+
+
+<!--===== CDMA INFO SECTION STARTS =======-->
+<div class="cdma-info-section-area" style="padding: 40px 0;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 m-auto">
+        <div class="heading4 text-center space-margin60">
+          <h5 class="vl-section-subtitle">About Us<span> | </span> Chronic Disease Mate for Africa 
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+            </svg>
+          </h5>
+          <div class="space24"></div>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Chronic Disease Mate for Africa (CDMA)</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="cdma-info-content text-center" style="min-height: 200px;">
+          <p>Chronic Disease Mate for Africa (CDMA) is a pioneering umbrella organization dedicated to addressing the growing burden of non-communicable diseases (NCDs) across the African continent. With a mission to reduce premature mortality and improve quality of life, CDMA collaborates with healthcare providers, communities, and policymakers to promote integrated, patient-centered care for chronic conditions such as cardiovascular diseases, diabetes, cancer, and chronic respiratory diseases.</p>
+          <div class="space16"></div>
+          <p>Founded to tackle the rising prevalence of NCDs, which account for an increasing share of mortality in sub-Saharan Africa, CDMA supports innovative strategies like the WHO’s PEN-Plus initiative, focusing on early diagnosis, treatment, and community-based care. By fostering partnerships, advocating for policy development, and leveraging technology such as mHealth solutions, CDMA empowers African health systems to address both infectious and non-communicable diseases effectively.</p>
+          <div class="space24"></div>
+          <a  class="btn btn-primary cdma-donate-btn mb-5" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Donate Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== CDMA INFO SECTION ENDS =======-->
+
+
+<!--===== PARTNER ORGANIZATIONS SECTION STARTS =======-->
+<div class="partner-org-section-area" style="padding: 40px 0;">
+ 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 m-auto">
+        <div class="heading4 text-center space-margin60">
+          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span> Our Partners
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+            </svg>
+          </h5>
+          <div class="space24"></div>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Our Partner Organizations</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="partner-org-content" style="min-height: 200px;">
+          <p>At Auxichron Health, we collaborate with leading organizations to enhance our impact in delivering innovative healthcare solutions across Africa. Our partnerships with global and regional entities strengthen our ability to address chronic diseases, promote health education, and provide accessible care. Below are some of our key partner organizations working alongside us to transform healthcare delivery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== PARTNER ORGANIZATIONS SECTION ENDS =======-->
+
+<!--===== TEAM AREA STARTS =======-->
+<div class="team4-section-area" style="padding: 40px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 m-auto">
+        <div class="heading4 text-center space-margin60">
+          <h5 class="vl-section-subtitle">Auxichron Health<span> | </span>Our Team
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+            </svg>
+          </h5>
+          <div class="space24"></div>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Meet Our Team</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="team4-boxarea text-center" style="min-height: 400px;">
+          <div class="img1" style="width: 200px; height: 200px; margin: 0 auto;">
+            <img src="{% static 'assets/img/all-images/team/md.jpg' %}" alt="Eseosa Iyagbaye" class="team-img10" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="name-area">
+            <a href="#">Eseosa Iyagbaye (PharmD)</a>
+            <div class="space12"></div>
+            <p>Chief Executive Officer</p>
+            <div class="space12"></div>
+            <a href="https://www.linkedin.com/in/eseosa-iyagbaye-pharmd-329b3514b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#02015A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--===== TEAM AREA ENDS =======-->
+
+
+
+<!--===== OUR WHY SECTION STARTS =======-->
+<section id="our-why" class="our-why-section-area sp6" style="padding: 40px 0;">
+  <img src="{% static 'assets/img/elements/elements14.png' %}" alt="Decorative Element" class="elements14" style="width: 100px; height: 100px; animation: fadeIn 1s ease-out;" onerror="this.src='https://via.placeholder.com/200x200.png?text=Decorative+Element';">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <div class="heading4 text-center space-margin60">
+          <h5 class="vl-section-subtitle">Our Mission<span> | </span> Why We Exist
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+              <path d="M0.667969 4.00033H11.049M8.00137 7.33366L11.3346 4.00033L8.0013 0.666992" stroke="#02015A" stroke-width="1.5" />
+            </svg>
+          </h5>
+          <div class="space24"></div>
+          <h2 class="vl-section-title" style="animation: fadeIn 1s ease-out;">Our Why</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-12" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="why-content-area text-center" style="min-height: 300px;">
+          <p class="section-description">At Auxichron Health, we are driven by a deep understanding of the challenges posed by chronic diseases in Africa and a commitment to transforming care for those affected.</p>
+          <div class="space16"></div>
+          <ul class="why-list">
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> Chronic diseases are long-term, life-altering, and often lonely.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> They now account for 3 in 5 deaths in Nigeria yet our systems still treat them like side notes.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> Most health systems in Africa are built for emergencies, not continuity. They respond to crises but don’t sustain care.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> People with chronic conditions deserve more than pills. They need education, community, support, access, and hope. They need to be seen, heard, and assisted consistently.</li>
+            <li><i class="fas fa-heartbeat" style="font-size: 18px;"></i> There’s a care gap: between appointments, across providers, and especially in underserved communities. And that gap often leads to complications, hospitalizations, even death.</li>
+          </ul>
+          <div class="space16"></div>
+          <p class="section-description"><strong>Auxichron was born to fill that gap</strong> to create connected, coordinated, and compassionate care that empowers individuals to live fully, not just manage symptoms.</p>
+          <div class="space24"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--===== OUR WHY SECTION ENDS =======-->
+
+      <!--===== CTA AREA STARTS =======-->
+<section class="cta4-section-area" style="background-image: url({% static 'assets/img/all-images/bg/bg5.png' %}); background-position: center; background-size: cover; background-repeat: no-repeat;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text Column -->
+      <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-left" data-aos-duration="800">
+        <div class="cta-content-area heading1">
+          <h2 class="text-anime-style-3">Join Our Health Provider Network!</h2>
+          <div class="space16"></div>
+          <p data-aos="fade-left" data-aos-duration="900">Collaborate. Care. Create Impact. Are you a licensed health professional passionate about long-term care? Auxichron Health welcomes doctors, pharmacists, nurses, physiotherapists, optometrists, psychologists, dietitians, and more into our growing network. Be part of a connected care system that supports prevention, diagnosis, management, and empowerment.</p>
+          <div class="space16"></div>
+          <ul class="cta-benefits" data-aos="fade-left" data-aos-duration="1000">
+            <li><i class="fas fa-check-circle"></i> Flexible consultations (virtual & physical)</li>
+            <li><i class="fas fa-check-circle"></i> Earn extra income</li>
+            <li><i class="fas fa-check-circle"></i> Increased patient access</li>
+            <li><i class="fas fa-check-circle"></i> Professional collaboration</li>
+            <li><i class="fas fa-check-circle"></i> Training and visibility</li>
+          </ul>
+          <div class="space24"></div>
+          <div class="btn-area1">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX3kxWR3iO5DMxpGXLYOdqTm4qSXAzK0EoRDc7bjrAN5vw3w/viewform" class="vl-btn4" data-aos="fade-up" data-aos-duration="1100">Apply to Join Now
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z" fill="white" />
+                </svg>
+              </span>
+            </a>
+            <a href="tel:+2349059940348" class="phone" data-aos="fade-up" data-aos-duration="1200">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <g clip-path="url(#clip0_5825_4343)">
+                  <path d="M4.32688 1.17598C4.79912 1.27359 5.1752 1.59087 5.40887 2.01006L6.15321 3.34544C6.42738 3.83727 6.65811 4.25117 6.80878 4.61098C6.96862 4.99266 7.06355 5.36904 7.02016 5.78518C6.97676 6.20131 6.80622 6.55001 6.57107 6.8905C6.3494 7.21148 6.03823 7.56888 5.66848 7.99356L4.57431 9.25038C4.37824 9.47563 4.2802 9.58821 4.27124 9.72896C4.26228 9.86971 4.34263 9.98996 4.50333 10.2304C5.87299 12.2796 7.71894 14.1262 9.76983 15.497C10.0103 15.6577 10.1305 15.738 10.2712 15.7291C10.412 15.7201 10.5247 15.6221 10.7498 15.426L12.0067 14.3318C12.4314 13.962 12.7888 13.6509 13.1098 13.4292C13.4502 13.194 13.799 13.0235 14.2151 12.9801C14.6312 12.9367 15.0077 13.0317 15.3893 13.1915C15.7491 13.3422 16.163 13.5729 16.6547 13.847L17.9902 14.5915C18.4094 14.8251 18.7267 15.2012 18.8243 15.6734C18.9229 16.1505 18.7775 16.6302 18.4562 17.0244C17.2904 18.4547 15.4227 19.3654 13.4633 18.9701C12.259 18.7272 11.0707 18.3225 9.63342 17.4982C6.74558 15.842 4.15636 13.2514 2.50212 10.367C1.67786 8.92963 1.2731 7.74134 1.03015 6.53696C0.634898 4.5776 1.54559 2.70987 2.9759 1.54412C3.37009 1.22284 3.84971 1.07736 4.32688 1.17598Z" fill="#02015A" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3062 1.54C11.4337 1.0978 11.8957 0.842779 12.3379 0.970388C15.5607 1.90041 18.099 4.43862 19.0292 7.66132C19.1567 8.1035 18.9017 8.56545 18.4596 8.69304C18.0174 8.8207 17.5554 8.5657 17.4278 8.1235C16.6565 5.45101 14.5483 3.34295 11.8757 2.57171C11.4336 2.4441 11.1786 1.98219 11.3062 1.54ZM10.7947 5.47187C10.9747 5.04825 11.4639 4.85066 11.8876 5.03055C13.2723 5.6186 14.381 6.72725 14.969 8.11199C15.1489 8.53562 14.9513 9.02487 14.5277 9.20479C14.1041 9.38462 13.6148 9.18704 13.4349 8.76345C13.0157 7.77614 12.2234 6.9839 11.2361 6.56463C10.8125 6.38474 10.6149 5.8955 10.7947 5.47187Z" fill="#02015A" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_5825_4343">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              +2349059940348
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Image Column -->
+      <div class="col-lg-6 col-md-6 col-sm-12" data-aos="fade-right" data-aos-duration="900">
+        <div class="cta-circle-area">
+          <div class="bg1">
+            <img src="{% static 'assets/img/all-images/bg/cta-bg1.png' %}" alt="CTA Background" class="cta-bg1">
+          </div>
+          <div class="img1">
+            <img src="{% static 'assets/img/all-images/cta/cta-img4.png' %}" alt="CTA Image" class="cta-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</section>
+<!--===== CTA AREA ENDS =======-->
+
+
+
+
+ <!--===== FOOTER AREA STARTS =======-->
+        <div class="vl-footer4-section-area mb-0"
+          style="background-image: url({% static 'assets/img/all-images/bg/bg4.png' %}); background-position: center; background-repeat: no-repeat; background-size: cover;">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5 col-md-6">
+                <div class="footer-description-area">
+                  <img src="{% static 'assets/img/logo/footer_img.png' %}" alt="Auxichron Health Logo" class="footer-logo"
+                    data-aos="fade-up" data-aos-duration="800">
+                  <div class="space24"></div>
+                  <p data-aos="fade-up" data-aos-duration="900">Auxichron was born to fill that gap - to create connected, coordinated, and compassionate care that empowers individuals to live fully, not just manage symptoms.</p>
+                  <div class="space28"></div>
+                  <div class="footer-form-area">
+                    <form action="#">
+                      <input type="email" placeholder="Email"
+                        aria-label="Email for Auxichron Health newsletter subscription">
+                      <button type="submit" class="vl-btn4" data-aos="fade-up" data-aos-duration="1000">Subscribe To Newsletter
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M11 0.25C5.06294 0.25 0.25 5.06294 0.25 11C0.25 16.9371 5.06294 21.75 11 21.75C16.9371 21.75 21.75 16.9371 21.75 11C21.75 5.06294 16.9371 0.25 11 0.25ZM10 7C9.5955 7 9.2309 7.24364 9.0761 7.61732C8.92134 7.99099 9.0069 8.42111 9.2929 8.70711L10.5858 10L7.29289 13.2929C6.90237 13.6834 6.90237 14.3166 7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L12 11.4142L13.2929 12.7071C13.5789 12.9931 14.009 13.0787 14.3827 12.9239C14.7564 12.7691 15 12.4045 15 12V8C15 7.44772 14.5523 7 14 7H10Z"
+                              fill="white" />
+                          </svg></span></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-md-6">
+                <div class="space30 d-md-none d-block"></div>
+                <div class="footer-widget-area foot-padding1">
+                  <h3 data-aos="fade-up" data-aos-duration="800">Quick Links</h3>
+                  <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'home' %}#about">About Us</a></li>
+                    <li><a href="{% url 'home' %}#services">Services</a></li>
+                    <li><a href="{% url 'home' %}#blog">Blog & Resources</a></li>
+           
+                    <li><a href="{% url 'contact' %}">Appointments</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg col-md-6">
+                <div class="space30 d-lg-none d-block"></div>
+                <div class="footer-widget-area foot-padding2">
+                  <h3 data-aos="fade-up" data-aos-duration="800">Popular Services</h3>
+                  <ul>
+                    <li><a href="{% url 'home' %}#services">Consultations</a></li>
+                    <li><a href="{% url 'home' %}#services">Telehealth</a></li>
+                    <li><a href="{% url 'home' %}#services">Wellness Programs</a></li>
+                    <li><a href="{% url 'home' %}#services">Diagnostics</a></li>
+                    <li><a href="{% url 'home' %}#services">Therapies</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg col-md-6">
+                <div class="space30 d-lg-none d-block"></div>
+                <div class="footer-widget-area">
+                  <h3 data-aos="fade-up" data-aos-duration="800">Contact Us</h3>
+                  <ul>
+                    <li><a href="tel:+11234567890"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                          viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M14.05 6C15.0268 6.19057 15.9244 6.66826 16.6281 7.37194C17.3318 8.07561 17.8095 8.97326 18 9.95M14.05 2C16.0793 2.22544 17.9716 3.13417 19.4163 4.57701C20.8609 6.01984 21.7721 7.91101 22 9.94M18.5 21C9.93959 21 3 14.0604 3 5.5C3 5.11378 3.01413 4.73086 3.04189 4.35173C3.07375 3.91662 3.08968 3.69907 3.2037 3.50103C3.29814 3.33701 3.4655 3.18146 3.63598 3.09925C3.84181 3 4.08188 3 4.56201 3H7.37932C7.78308 3 7.98496 3 8.15802 3.06645C8.31089 3.12515 8.44701 3.22049 8.55442 3.3441C8.67601 3.48403 8.745 3.67376 8.88299 4.05321L10.0491 7.26005C10.2096 7.70153 10.2899 7.92227 10.2763 8.1317C10.2643 8.31637 10.2012 8.49408 10.0942 8.64506C9.97286 8.81628 9.77145 8.93713 9.36863 9.17882L8 10C9.2019 12.6489 11.3501 14.7999 14 16L14.8212 14.6314C15.0629 14.2285 15.1837 14.0271 15.3549 13.9058C15.5059 13.7988 15.6836 13.7357 15.8683 13.7237C16.0777 13.7101 16.2985 13.7904 16.74 13.9509L19.9468 15.117C20.3262 15.255 20.516 15.324 20.6559 15.4456C20.7795 15.553 20.8749 15.6891 20.9335 15.842C21 16.015 21 16.2169 21 16.6207V19.438C21 19.9181 21 20.1582 20.9007 20.364C20.8185 20.5345 20.663 20.7019 20.499 20.7963C20.3009 20.9103 20.0834 20.9262 19.6483 20.9581C19.2691 20.9859 18.8862 21 18.5 21Z"
+                            stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> +2349059940348</a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                          fill="none">
+                          <path
+                            d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                            stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                          <path
+                            d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                            stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>Nigeria</a></li>
+                    <li><a href="mailto:info@auxichronhealth.com"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                          height="24" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M4 18L9 12M20 18L15 12M3 8L10.225 12.8166C10.8665 13.2443 11.1872 13.4582 11.5339 13.5412C11.8403 13.6147 12.1597 13.6147 12.4661 13.5412C12.8128 13.4582 13.1335 13.2443 13.775 12.8166L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+                            stroke="#31353D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> info@auxichronhealth.com</a></li>
+                  </ul>
+                  <div class="space20"></div>
+                <ul class="social-links">
+                  <li><a href="https://www.facebook.com/profile.php?id=100082807493200" aria-label="Follow Auxichron Health on Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/chronmate-app/" aria-label="Follow Auxichron Health on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://www.instagram.com/auxichron?igsh=MTV4ZGFmaDU1dzZncQ==" aria-label="Follow Auxichron Health on Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                
+            
+                  <li><a href="https://wa.me/2349059940348" aria-label="Follow Auxichron Health on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+                </div>
+              </div>
+            </div>
+            <div class="space100"></div>
+            <div class="col-lg-12">
+              <div class="copyright-area">
+                <a href="#">© Copyright 2025 Auxichron Health. All Rights Reserved</a>
+                <ul>
+                  <li><a href="#">Privacy Policy</a><span> | </span></li>
+                  <li><a href="#">Terms of Service</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--===== FOOTER AREA ENDS =======-->
+
+
+
+     <!-- Loading Overlay Spinner -->
+<div id="loadingOverlay" class="loading-overlay" style="display: none;">
+  <div class="spinner-container">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="text-center mt-2" style="color: #02015A; font-weight: 500;">Processing your request...</p>
+  </div>
+</div>
+
+
+
+ <!--===== JS SCRIPT LINK =======-->
+        <script src="{% static 'assets/js/plugins/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/fontawesome.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/aos.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/counter.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/gsap.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/ScrollTrigger.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/Splitetext.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/SmoothScroll.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/sidebar.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/magnific-popup.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/mobilemenu.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/owlcarousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/nice-select.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/waypoints.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/slick-slider.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/circle-progress.js' %}"></script>
+        <script src="{% static 'assets/js/plugins/swiper.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        <script src="{% static 'assets/js/custom.js' %}"></script>
+
+        
+
+
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+
+<script>
+  $(document).ready(function() {
+    $('#appointmentForm').on('submit', function(e) {
+      e.preventDefault();
+
+      // Show the loading overlay
+      $('#loadingOverlay').show();
+
+      const formData = {
+        full_name: $('input[name="full_name"]').val(),
+        phone_number: $('input[name="phone_number"]').val(),
+        email: $('input[name="email"]').val(),
+        service_type: $('.nice-select').val() || 'Not specified',
+        message: $('textarea[name="message"]').val()
+      };
+
+      $.ajax({
+        url: '{% url "book_appointment" %}',
+        type: 'POST',
+        data: formData,
+        headers: {
+          'X-CSRFToken': $('input[name="csrfmiddlewaretoken"]').val()
+        },
+        success: function(response) {
+          $('#loadingOverlay').hide(); // Hide the overlay on success
+          if (response.success) {
+            Swal.fire({
+              icon: 'success',
+              title: 'Success!',
+              text: response.message,
+              confirmButtonText: 'OK'
+            }).then(() => {
+              $('#appointmentForm')[0].reset();
+            });
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: response.message,
+              confirmButtonText: 'OK'
+            });
+            console.error('Server response:', response.message);
+          }
+        },
+        error: function(xhr, status, error) {
+          $('#loadingOverlay').hide(); // Hide the overlay on error
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'There was an error processing your request. Please try again later.',
+            confirmButtonText: 'OK'
+          });
+          console.error('AJAX Error:', status, error);
+        }
+      });
+    });
+  });
+</script>
+
+        <script>
+          $(document).ready(function () {
+            $('.partner-org-slider').owlCarousel({
+              loop: true,
+              margin: 20,
+              nav: true,
+              responsive: {
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 3 }
+              }
+            });
+          });
+        </script>
+
+<!--===== BLOG AREA ENDS =======-->
+        <!--===== FLOATING ACTION BUTTON SECTION STARTS =======-->
+        <div class="fab-container" aria-hidden="true">
+          <h2 class="visually-hidden">Quick Actions with Auxichron Health</h2>
+          <button class="fab-toggle d-lg-none" aria-label="Toggle Action Menu">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="fab-buttons">
+            <a href="{% url 'contact' %}" class="fab-button" title="Book an Appointment with Auxichron Health"
+              aria-label="Book an Appointment with Auxichron Health" data-aos="fade-up" data-aos-duration="800">
+              <i class="fa-solid fa-calendar-alt"></i>
+              <span class="fab-label">Book Appointment</span>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX3kxWR3iO5DMxpGXLYOdqTm4qSXAzK0EoRDc7bjrAN5vw3w/viewform" class="fab-button" title="Donate to Auxichron Health"
+              aria-label="Donate to Auxichron Health" data-aos="fade-up" data-aos-duration="900">
+              <i class="fa-solid fa-heart"></i>
+              <span class="fab-label">Donate</span>
+            </a>
+            <a href="{% url 'partnerships' %}" class="fab-button" title="Partner with Auxichron Health"
+              aria-label="Partner with Auxichron Health" data-aos="fade-up" data-aos-duration="1000">
+              <i class="fa-solid fa-handshake"></i>
+              <span class="fab-label">Partner with Us</span>
+            </a>
+          </div>
+        </div>
+        <!--===== FLOATING ACTION BUTTON SECTION ENDS =======-->
+
+
+        <script>
+    var wa_btnSetting = {
+        btnColor: "#16BE45",
+        ctaText: "WhatsApp Us",
+        cornerRadius: 40,
+        marginBottom: 20,
+        marginLeft: 20,
+        marginRight: 20,
+        btnPosition: "right", // Button positioned on the right
+        whatsAppNumber: "+2349059940348", // Cleaned phone number format
+        welcomeMessage: "Hello",
+        zIndex: 999999,
+        btnColorScheme: "light",
+    };
+    window.onload = () => {
+        _waEmbed(wa_btnSetting);
+    };
+</script>
+
+<script async src="https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js"></script>
+
+    
+
+        
+</body>
+
+</html>

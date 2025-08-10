@@ -1,0 +1,294 @@
+
+/* Existing CTA Section Styles */
+.cta-section-area {
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cta-section-area p {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-area1 {
+  margin: 15px 0;
+}
+
+.vl-btn4 {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.vl-btn4:hover {
+  background: #0056b3;
+  color: #fff;
+}
+
+.vl-btn4 span {
+  margin-left: 10px;
+}
+
+@media (max-width: 991px) {
+  .cta-section-area .col-lg-4 {
+    margin-bottom: 20px;
+  }
+  .vl-btn4 {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-heading {
+    font-size: 24px;
+  }
+  .cta-section-area p {
+    font-size: 14px;
+  }
+}
+
+/* Floating Action Button Styles */
+.fab-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Changed from right: 20px */
+  z-index: 1000;
+}
+
+.fab-toggle {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: #007bff; /* Match vl-btn4 color */
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.fab-toggle:hover {
+  background: #0056b3;
+}
+
+.fab-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #007bff; /* Match vl-btn4 color */
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+}
+
+.fab-button:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+.fab-button i {
+  font-size: 20px;
+}
+
+.fab-label {
+  display: none;
+  position: absolute;
+  left: 60px; /* Changed from right: 60px to appear on the right of the button */
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.fab-button:hover .fab-label {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .fab-toggle {
+    display: block;
+  }
+  .fab-buttons {
+    display: none;
+  }
+  .fab-container.active .fab-buttons {
+    display: flex;
+  }
+  .fab-container.active .fab-toggle {
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .fab-container {
+    bottom: 15px;
+    left: 15px; /* Changed from right: 15px */
+  }
+  .fab-button, .fab-toggle {
+    width: 45px;
+    height: 45px;
+  }
+  .fab-button i {
+    font-size: 18px;
+  }
+  .fab-label {
+    left: 55px; /* Adjusted for smaller buttons */
+  }
+}
+
+/* Visually Hidden for SEO and Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.vl-main-menu ul li a {
+    text-decoration: none;
+}
+
+
+a{
+  text-decoration: none !important;
+}
+
+
+.partner-org-slider .partner-boxarea .img1 img {
+  max-width: 150px; /* Adjust based on your design */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image */
+  object-fit: contain; /* Ensure logos aren't distorted */
+}
+
+@media (max-width: 768px) {
+  .partner-org-slider .partner-boxarea .img1 img {
+    max-width: 100px; /* Smaller size for mobile */
+  }
+}
+
+
+.nice-select .list {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+  }
+  .nice-select .list::-webkit-scrollbar {
+    width: 8px; /* For Chrome, Safari, Edge */
+  }
+  .nice-select .list::-webkit-scrollbar-thumb {
+    background-color: #02015A; /* Matches your theme color */
+    border-radius: 4px;
+  }
+  .nice-select .list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+
+
+
+  /* Fix select width overflow issue */
+.input-area,
+.nice-select,
+.nice-select .current {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.nice-select {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.nice-select.open .list {
+  width: 100%;
+}
+
+.nice-select .list .option {
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  max-width: 100%; /* Ensure option doesn't exceed list width */
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+
+
+.form-container {
+  max-width: 600px; /* Match your CTA paragraph max-width for consistency */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px; /* Space between fields */
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.form-row .input-area,
+.form-row .nice-select,
+.form-row input,
+.form-row select,
+.form-row textarea {
+  flex: 1; /* Each field takes equal space */
+  min-width: 0; /* Prevent overflow from long content */
+  box-sizing: border-box; /* Include padding in width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-row textarea {
+  height: 100px; /* Adjust height for message field */
+}
+
+@media (max-width: 767px) {
+  .form-row {
+    flex-direction: column; /* Stack fields vertically on small screens */
+    gap: 10px;
+  }
+}
